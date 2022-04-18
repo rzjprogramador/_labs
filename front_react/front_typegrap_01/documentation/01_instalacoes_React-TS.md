@@ -13,5 +13,15 @@ cd <entrar na pasta criada do projeto>
    ``` npm run dev ```
 
 ---
+# DEPENDENCIAS PARA GRAPHQL NO REACT
+> Obs: pelo menos em abril 2022 pela resposta do erro :: 
+> só aceitou instalar @apollo/client graphql com nom usando: --legacy-peer-deps 
+> 
+``` npm i @apollo/client graphql --legacy-peer-deps ```
+
+---
+
+
+
 
  
