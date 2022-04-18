@@ -1,6 +1,8 @@
 
 function App() {
-  return <h1>Alo Mundo</h1>
+  return (
+    <h1>Alo Mundo</h1>
+  )
 }
 
 export default App
