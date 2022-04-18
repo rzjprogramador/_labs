@@ -50,11 +50,13 @@ mutation createUser {
 }
 
 ### CONSULTAR TODOS USERS CRIADOS :: HARDCODE
-query allUsers {
+query GET_USERS {
   users {
     id
     nome
     idade
   }
 }
+
+---
 

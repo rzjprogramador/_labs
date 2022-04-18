@@ -6,7 +6,7 @@ type User = {
   idade: number
 }
 
-const GET_USER = gql`
+const GET_USERS = gql`
   query {
     users {
     id
@@ -16,7 +16,7 @@ const GET_USER = gql`
 `
 
 function App() {
-  const { data, loading } = useQuery<{ users: User[] }>(GET_USER)
+  const { data, loading } = useQuery<{ users: User[] }>(GET_USERS)
   console.log(data)
 
   if (loading) {
