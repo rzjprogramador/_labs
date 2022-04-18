@@ -16,8 +16,10 @@ async function main () {
     schema,
   })
 
-  const { url } = await server.listen()
-  console.log(`SERVER ON IN ${ url }`)
+  const { url } = await server.listen({
+    port: 7777,
+  })
+  console.log(`SERVER-ON ${ url }`)
 }
 
 main()

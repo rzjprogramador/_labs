@@ -9,4 +9,7 @@ export class User {
   @Field()
   nome: string
 
+  @Field()
+  idade: number
+
 }
