@@ -1,5 +1,5 @@
 import { Resolver, Query, Mutation, Arg } from 'type-graphql'
-import { User } from '../models/user'
+import { User } from '../models/User'
 
 import crypto from 'crypto'
 

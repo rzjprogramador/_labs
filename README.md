@@ -1,2 +1,0 @@
-# typegraphQL
-labs TypegraphQL
