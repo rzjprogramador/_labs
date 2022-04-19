@@ -15,6 +15,8 @@ export class NewReceitaInput {
 
 }
 
+// Opcoes para os args deste tipo
+
 @ArgsType()
 export class ReceitasArgs {
 
