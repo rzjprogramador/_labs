@@ -1,8 +1,10 @@
-import { Field, Float, ObjectType } from 'type-graphql'
-import { Avaliacao } from './Avaliacao'
+import { Field, ID, ObjectType } from 'type-graphql'
 
 @ObjectType()
-export class Receitas {
+export class Receita {
+  
+  @Field(type => ID)
+  id: string
 
   @Field()
   titulo: string
@@ -10,13 +12,9 @@ export class Receitas {
   @Field( { nullable: true} )
   descricao?: string
 
-  @Field(() => [Avaliacao])
-  avaliacoes: Avaliacao[]
+  creationDate: Date
 
-  @Field(type => Float, { nullable: true })
-  get mediaAvaliacao (): number {
-    const soma = this.avaliacoes.reduce( (a: number, b: number) => a + b, 0 )
-    return soma / this.avaliacoes.length
-  }
+  @Field(() => [String])
+  ingredientes: string[]
 
 }
