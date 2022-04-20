@@ -42,6 +42,17 @@ ConfigModule.forRoot({
 # RECUPERANDO VARIAVEL DE AMBIENTE :
 INJETO EM QUALQUER CONSTRUTOR O ATRIBUTO : private readonly configService: ConfigService
 USO DO ATRIBUTO INJETADO COM O NOME DA VARIAVEL .GET()::
-this.configService.get('NOME DA VARIAVEL DE AMBIENTE DENTRO DE STRING') exemplo:
-`usando o valor :: ${this.configService.get('SERVER_LOCAL')}`;
+this.configService.get<TIPO DO VALOR DA VARIAVEL>('NOME DA VARIAVEL DE AMBIENTE DENTRO DE STRING') 
+OBS: COLOCANDO O TIPO DA VARIAVEL TEREMOS OS METODOS DO TIPO DISPONIVEIS PARA ELA.
+exemplo:
+`usando o valor :: ${this.configService.get<number>('SERVER_LOCAL')}`;
+
+> POSSO ACESSAR AS VARIAVEIS DE AMBIENTE DO .ENV EM QUALQUER ARQUIVO 
+> SEM IMPORTAR NADA E USANDO O :
+process.env.<NOME_DA_VARIAVEL>
+obs: para fazer efeito reinicie o server.
+---
+
+
+
 

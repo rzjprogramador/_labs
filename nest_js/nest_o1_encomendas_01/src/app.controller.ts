@@ -18,6 +18,6 @@ export class AppController {
   getAmbiente(): string {
     return `
     Recuperando variavel de ambiente que tem o valor ::
-     ${this.configService.get('SERVER_LOCAL')}`;
+     ${this.configService.get<number>('SERVER_LOCAL')}`;
   }
 }
