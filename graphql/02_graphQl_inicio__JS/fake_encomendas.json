@@ -1,0 +1,81 @@
+{
+  "usuarios": [
+    { "id": "1", "indexRef": 1 ,"nome": "Reinaldo API", "email": "reinaldo@email.com", 
+      "pedidos": [{ "id": "1", "id_pedido": "1"}] }, 
+
+    { "id": "2", "indexRef": 2, "nome": "Gustavo API", "email": "gustavo@email.com",
+      "pedidos": [{ "id": "1", "id_pedido": "2"}] },
+
+    { "id": "3", "indexRef": 3, "nome": "Leonardo API", "email": "leonardo@email.com", 
+      "pedidos": [{ "id": "1", "id_pedido": "3"}] }
+    
+  ],
+  "produtos": [
+    { "id": "1", "nome": "Encomenda", "preco": 15, "dadosEncomenda_id": "1", "indexRef": "1", "createdAt": "2022-03-09T15:15:18.817Z" }
+  ],
+  "produtos_encomenda": [
+    {
+      "id": "1",
+      "indexRef": 1,
+      "remetente": "Remetente VIA API 1",
+      "destinatario": "Destinatario 1 VIA API",
+      "logradouro": "Rua tal 1",
+      "numero": "111",
+      "complemento": "Complemento 1",
+      "cidade": "Sao Paulo",
+      "estado": "SP",
+      "quantidade": 1,
+      "preco_base": 15.0,
+      "acrescimo": 0,
+      "desconto": 0
+    },
+    {
+      "id": "2",
+      "indexRef": 2,
+      "remetente": "Remetente 2 VIA API",
+      "destinatario": "Destinatario 2 VIA API",
+      "logradouro": "Rua tal 2",
+      "numero": "222",
+      "complemento": "Complemento 2",
+      "cidade": "Sao Paulo",
+      "estado": "SP",
+      "quantidade": 1,
+      "preco_base": 15.0,
+      "acrescimo": 10,
+      "desconto": 5
+    },
+    {
+      "id": "3",
+      "indexRef": 3,
+      "remetente": "Remetente 3 VIA API",
+      "destinatario": "Destinatario 3 VIA API",
+      "logradouro": "Rua tal 3",
+      "numero": "333",
+      "complemento": "Complemento 3",
+      "cidade": "Sao Paulo",
+      "estado": "SP",
+      "quantidade": 1,
+      "preco_base": 15.0,
+      "acrescimo": 10,
+      "desconto": 5
+    }
+  ],
+
+  "pedidos": [
+    { "id": "1", "usuario_id": "1","produto": "Encomenda", "produto_id": "1", "preco": 15, "indexRef": "1", "createdAt": "2022-03-09T15:15:18.817Z" },
+
+    { "id": "2", "usuario_id": "2","produto": "Encomenda", "produto_id": "1", "preco": 15, "indexRef": "1", "createdAt": "2022-03-09T15:15:18.817Z" },
+
+    { "id": "3", "usuario_id": "1","produto": "Encomenda", "produto_id": "1", "preco": 15, "indexRef": "1", "createdAt": "2022-03-09T15:15:18.817Z" }
+  ],
+
+  "dadosEncomenda": [
+    { "id": "1","usuario_id": "1", "produto_id": "1", "pedido_id": "1", "indexRef": 3,"logradouro": "rua Um", "cep": "111111", "cidade": "Sao Paulo", "estado": "SP", "preco": 15, "status": "entregue", "createdAt": "2022-03-09T15:15:18.817Z" },
+
+    { "id": "2", "indexRef": 2,"logradouro": "rua Um", "cep": "111111", "cidade": "Sao Paulo", "estado": "SP", "preco": 15, "status": "entregue", "createdAt": "2022-03-09T15:15:18.817Z" },
+
+    { "id": "3", "indexRef": 1,"logradouro": "rua Um", "cep": "111111", "cidade": "Sao Paulo", "estado": "SP", "preco": 15, "status": "entregue", "createdAt": "2022-03-09T15:15:18.817Z" }
+    
+  ]
+
+}
