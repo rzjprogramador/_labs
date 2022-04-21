@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { EncomendaTest1Service } from './encomenda_test1.service';
 
 @Controller('encomenda-test1')
@@ -19,5 +19,11 @@ export class EncomendaTest1Controller {
   @Get('rota-encomenda1')
   funcaoServicalControle(): string {
     return this.encomendaTest1Service.getFuncaoServical();
+  }
+
+  @Get('buscar-dado/:nome')
+  buscarDado(@Param('nome') nome: string): string {
+    return `Prazer em conhecer ${nome}`;
+    // browser : http://localhost:3333/encomenda-test1/buscar-dado/Reinaldo
   }
 }
