@@ -1,0 +1,21 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Pedido {
+  id: ID!
+  quantidade: Int!
+  descricao: String!
+}
+
+type Author {
+  id: ID!
+  pedidos: [Pedido!]!
+  nome: String
+  email: String!
+  senha: String!
+}
+
+type Query {
+  author(id: Int!): Author!
+}

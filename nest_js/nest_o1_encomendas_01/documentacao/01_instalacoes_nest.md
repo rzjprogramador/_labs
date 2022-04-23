@@ -54,6 +54,29 @@ obs: para fazer efeito reinicie o server.
 
 ---
 
+# GRAPHQL NO NEST
+install graphql no nest: https://docs.nestjs.com/graphql/quick-start
+ ```npm i @nestjs/graphql @nestjs/apollo graphql apollo-server-express```
 
+ // PARA GERAR O SCHEMA.GQL :: https://www.npmjs.com/package/@graphql-tools/schema
+ ```npm i @graphql-tools/schema```
+
+ > e registra os modulos graphql e apollo como diz na doc no app.module principal da app.
+
+### usar o apdrao : CodeFirst = Codifique Primeiro que o graphql faz as outras configuracoes automaticamente
+> adicionar na configuracao do GraphQLModule a configuracao para usar o code-first para criar o auto-schema.gql :
+> // configuracao CodeFisrt :
+autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+
+// agora vai pro capitulo resolvers: em resolvers procurar configuracaoes para usar CodeFisrt:
+
+
+ ---
+
+# TESTS JEST
+doc: (https://docs.nestjs.com/fundamentals/testing#testing)
+ npm i -D @nestjs/testing
+
+---
 
 
