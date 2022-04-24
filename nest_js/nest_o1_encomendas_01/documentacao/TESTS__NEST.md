@@ -6,4 +6,5 @@ no escopo de provider
 
 - Sempre temos controllers [] e providers []
 - são provedores/providers :: as composicoes integradas no constructor do controle tem que estar sendo testada ai no beforeEach/Antes de cada
+- Nos modulos Teremos arquivo de test para controller e para service ..todos vao testar a integracao feita no construtor.
 - 
