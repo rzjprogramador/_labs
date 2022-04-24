@@ -16,10 +16,10 @@ export class EncomendaTest1Controller {
   }
 
   // UTILIZANDO A FUNCAO VINDA DO SERVICO
-  @Get('rota-encomenda1')
-  funcaoServicalControle(): string {
-    return this.encomendaTest1Service.getFuncaoServical();
-  }
+  // @Get('rota-encomenda1')
+  // funcaoServicalControle(): string {
+  //   return this.encomendaTest1Service.getFuncaoServical();
+  // }
 
   @Get('buscar-dado/:nome')
   buscarDado(@Param('nome') nome: string): string {
