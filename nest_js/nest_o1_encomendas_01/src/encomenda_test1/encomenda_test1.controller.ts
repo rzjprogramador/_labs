@@ -10,6 +10,11 @@ export class EncomendaTest1Controller {
     return `Alo to no Controle 1 --`;
   }
 
+  @Get('rota-config-service')
+  rotaIntegracaoConfigService(): string {
+    return this.encomendaTest1Service.getTestService();
+  }
+
   @Get('rota2')
   rota2(): string {
     return `Esta é a rota 2`;
