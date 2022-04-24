@@ -19,9 +19,30 @@ export class EncomendaTest1Service {
 
   // Usando o model feito no prisma - nas definicoes de tipos do prisma ::procurar por <nome do model> WhereUniqueInput
 
-  async pai(paiUnicoInput: Prisma.DeletarPaiWhereUniqueInput) {
+  // BUSCAR PAI UNICO
+  async pai(
+    paiUnicoInput: Prisma.DeletarPaiWhereUniqueInput,
+  ): Promise<DeletarPai | null> {
     return this.prisma.deletarPai.findUnique({
       where: paiUnicoInput,
+    });
+  }
+
+  // BUSCAR OS DADOS DO PAI
+  async pais(params: {
+    skip?: number;
+    take?: number;
+    cursor?: Prisma.DeletarPaiWhereUniqueInput;
+    where?: Prisma.DeletarPaiWhereInput;
+    orderBy?: Prisma.DeletarPaiOrderByWithAggregationInput; //era ByInput na aula
+  }): Promise<DeletarPai[]> {
+    const { skip, take, cursor, where, orderBy } = params;
+    return this.prisma.deletarPai.findMany({
+      skip,
+      take,
+      cursor,
+      where,
+      orderBy,
     });
   }
 

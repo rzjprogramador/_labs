@@ -1,9 +1,16 @@
 import { Controller, Get, Param } from '@nestjs/common';
+import { DeletarPai } from '@prisma/client';
 import { EncomendaTest1Service } from './encomenda_test1.service';
 
 @Controller('encomenda-test1')
 export class EncomendaTest1Controller {
   constructor(private readonly encomendaTest1Service: EncomendaTest1Service) {}
+
+  // TRAZENDO VIA SERVICO :: LA DO PRISMA  :: TODOS OS DADOS
+  @Get('deletar-pai')
+  async getDeletarPai(): Promise<DeletarPai[]> {
+    return this.encomendaTest1Service.pais({});
+  }
 
   @Get('rota1')
   alo(): string {
