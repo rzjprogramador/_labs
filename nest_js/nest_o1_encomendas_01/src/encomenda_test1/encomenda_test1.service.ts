@@ -8,7 +8,7 @@ export class EncomendaTest1Service {
   getFuncaoServical(): string {
     return `Retorno da funcao Servical`;
   }
-  async findAuthorById(id: number) {
+  async findAuthorById(id: string) {
     // TODO
     return;
   }

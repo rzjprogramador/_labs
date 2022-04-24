@@ -16,7 +16,7 @@ export class AuthorsResolver {
   constructor(private encomendaService: EncomendaTest1Service) {}
 
   @Query((returns) => Author)
-  async author(@Args('id', { type: () => Int }) id: number) {
+  async author(@Args('id', { type: () => Int }) id: string) {
     return this.encomendaService.findAuthorById(id);
   }
 
