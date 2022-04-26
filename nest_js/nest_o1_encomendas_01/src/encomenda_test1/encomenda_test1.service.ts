@@ -4,7 +4,8 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { PrismaService } from '../prisma.service';
 import { Prisma, DeletarPai, DeletarPedidoFilho } from '@prisma/client';
-// import { Author } from '../models/author.model';
+
+import { PaiDTO } from './contract/PaiDTO';
 
 @Injectable()
 export class EncomendaTest1Service {
@@ -20,9 +21,7 @@ export class EncomendaTest1Service {
   // Usando o model feito no prisma - nas definicoes de tipos do prisma ::procurar por <nome do model> WhereUniqueInput
 
   // BUSCAR PAI UNICO
-  async pai(
-    paiUnicoInput: Prisma.DeletarPaiWhereUniqueInput,
-  ): Promise<DeletarPai | null> {
+  async pai(paiUnicoInput: PaiDTO): Promise<DeletarPai | null> {
     return this.prisma.deletarPai.findUnique({
       where: paiUnicoInput,
     });

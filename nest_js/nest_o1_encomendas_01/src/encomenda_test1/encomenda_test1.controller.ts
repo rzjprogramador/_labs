@@ -1,6 +1,8 @@
-import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { DeletarPai } from '@prisma/client';
 import { EncomendaTest1Service } from './encomenda_test1.service';
+
+import { existPai } from '../helpers/verifications/pai_verifications';
 
 @Controller('encomenda-test1')
 export class EncomendaTest1Controller {
@@ -8,30 +10,16 @@ export class EncomendaTest1Controller {
 
   // TRAZENDO VIA SERVICO :: LA DO PRISMA  :: TODOS OS DADOS
   @Get('deletar-pai')
-  async getDeletarPai(): Promise<DeletarPai[]> {
+  async getDeletarPais(): Promise<DeletarPai[]> {
     return this.encomendaTest1Service.pais({});
   }
 
-  // TRAZENDO VIA SERVICO :: LA DO PRISMA  :: POR PARAMS UNICO DADO PASSADO
-  // ACESSAR : http://localhost:3333/encomenda-test1/deletar-pai/3     >> O ULTIMO NUMERO É DO ID PASSADO
   @Get('deletar-pai/:id')
   async getDeletarPaiById(@Param('id') id: string): Promise<DeletarPai> {
     const pai = await this.encomendaTest1Service.pai({
       id: Number.parseInt(id),
-
-      // por no prisma o id ser inteiro apra auto-incrementar e no graphql ser string do ID convertemso para int aqui
     });
-
-    // Se nao tiver - retornar o 404 NotFound
-    if (!pai) {
-      throw new NotFoundException();
-    }
-    return pai;
-  }
-
-  @Get('rota1')
-  alo(): string {
-    return `Alo to no Controle 1 --`;
+    return existPai(pai);
   }
 
   @Get('rota-config-service')
@@ -53,6 +41,5 @@ export class EncomendaTest1Controller {
   @Get('buscar-dado/:nome')
   buscarDado(@Param('nome') nome: string): string {
     return `Prazer em conhecer ${nome}`;
-    // browser : http://localhost:3333/encomenda-test1/buscar-dado/Reinaldo
   }
 }
