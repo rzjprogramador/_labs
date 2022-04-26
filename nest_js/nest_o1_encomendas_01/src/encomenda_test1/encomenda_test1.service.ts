@@ -3,7 +3,7 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { PrismaService } from '../prisma.service';
-import { Prisma, DeletarPai, DeletarPedidoFilho } from '@prisma/client';
+import { Prisma, DeletarPai } from '@prisma/client';
 
 import { PaiDTO } from './contract/PaiDTO';
 
@@ -31,7 +31,7 @@ export class EncomendaTest1Service {
   async pais(params: {
     skip?: number;
     take?: number;
-    cursor?: Prisma.DeletarPaiWhereUniqueInput;
+    cursor?: PaiDTO;
     where?: Prisma.DeletarPaiWhereInput;
     orderBy?: Prisma.DeletarPaiOrderByWithAggregationInput; //era ByInput na aula
   }): Promise<DeletarPai[]> {
@@ -48,9 +48,7 @@ export class EncomendaTest1Service {
   getFuncaoServical(): string {
     return `Retorno da funcao Servical`;
   }
-  async findAuthor(
-    idParam: Prisma.DeletarPaiWhereUniqueInput,
-  ): Promise<DeletarPai | null> {
+  async findAuthor(idParam: PaiDTO): Promise<DeletarPai | null> {
     return this.prisma.deletarPai.findUnique({
       where: idParam,
     });
