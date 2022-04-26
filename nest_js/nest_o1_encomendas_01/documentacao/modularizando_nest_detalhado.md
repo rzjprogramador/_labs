@@ -18,3 +18,9 @@ Importe o metodo Get dentro de '@nestjs/common'
 use o decorator @Get('Em string o nome da rota que vai ter antes automaticamente o nome do modulo')
 - abaixo crie a funcao que vai retornar algo nesta rota
 ---
+
+## DELETAR UM MODULO 
+- Tem que deletar as linhas onde ele esta sendo importado : provavelmente no App module Root Principal
+- E o Query do GraphQL tem que ter aumenos uma Query Root ..para ser considerado um servidor valido de graphql
+- solucao: senao tiver nenhuma Query em uso: entrar no app module Root Principal e comentar o GraphQLMOdule.forRoot inteiro.
+- 

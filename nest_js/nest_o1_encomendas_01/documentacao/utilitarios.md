@@ -1,2 +1,2 @@
 # TUTORIAL CODIGO FALADO - CRIAR MODULO USER
-tuto: (https://youtu.be/mZDerXaz8uI?t=12490)
+tuto: (https://youtu.be/mZDerXaz8uI?t=12626)
