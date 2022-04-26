@@ -11,10 +11,10 @@ e adicione no final após o import: [], a propriedade :
 
 ### Para ter endPoint para o Client :
 - (REST) criar Modulo / Controler // Service 
-- (GRAPHQL) criar classe Object Type / Classe Resolver // Service
+- (GRAPHQL) criar Modulo /criar classe Object Type / Classe Resolver // Service
 
 > MODULARIZACAO :
->> diferente do Rest :: Nao cria modulo, 
+>> Todos os module de cada entidade tem que ser registrado no imports do module principal do app, 
 - Cria a classe modelo de tipo de objeto  @ObjectType e mescla a tipagem ts com graphql ...
 
 > ROTA // ENDPOINT NO GRAPHQL SAO OS METODOS DA CLASSE RESOLVER :
