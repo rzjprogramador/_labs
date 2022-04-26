@@ -22,7 +22,6 @@ import { join } from 'path';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
     EncomendaTest1Module,
-    // AuthorModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],
