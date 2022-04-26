@@ -49,10 +49,14 @@ export class EncomendaTest1Service {
   getFuncaoServical(): string {
     return `Retorno da funcao Servical`;
   }
-  async findAuthorById(id: string) {
-    // TODO
-    return;
+  async findAuthor(
+    idParam: Prisma.DeletarPaiWhereUniqueInput,
+  ): Promise<DeletarPai | null> {
+    return this.prisma.deletarPai.findUnique({
+      where: idParam,
+    });
   }
+
   async findPedidosByAuthor({ authorId: Author }) {
     // TODO
     return;

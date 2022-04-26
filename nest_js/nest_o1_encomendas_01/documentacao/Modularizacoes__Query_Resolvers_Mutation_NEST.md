@@ -38,6 +38,10 @@ A classe Resolvers seria como um modulo controller, que recebe as requisicoes pe
 - utilizamos os decoradores @Args , @Body e assim capturamos as requisicoes 
 - isto é semelhante aos controlllers do Rest que capta os Argumentos do Client.
 
+> Resolver Trivial : @ResolveField 
+- resolve com funcao um campo de um modelo 
+- usa o decorador : @ResolveField()
+
 ---
 
 

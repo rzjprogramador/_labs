@@ -15,14 +15,13 @@ import { EncomendaTest1Service } from '../encomenda_test1/encomenda_test1.servic
 export class AuthorsResolver {
   constructor(private encomendaService: EncomendaTest1Service) {}
 
-  @Query((returns) => Author)
-  async author(@Args('id', { type: () => Int }) id: string) {
-    return this.encomendaService.findAuthorById(id);
+  @Query((returns) => [Author])
+  async authors() {
+    return this.encomendaService.pais({});
   }
 
-  @ResolveField()
-  async pedidos(@Parent() author: Author) {
-    const { id } = author;
-    return this.encomendaService.findPedidosByAuthor({ authorId: id });
+  @Query((returns) => Author)
+  async author(@Args('id', { type: () => Int }) id: number) {
+    return this.encomendaService.findAuthor({ id });
   }
 }
