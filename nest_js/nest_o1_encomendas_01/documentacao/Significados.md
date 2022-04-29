@@ -1,1 +1,0 @@
-adjetivo == é o que uma entidade é ou tem de qualidade ou defeito ex: inteligente, feio, bonita.

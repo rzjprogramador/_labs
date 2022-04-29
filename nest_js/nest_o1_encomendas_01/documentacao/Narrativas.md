@@ -1,1 +1,0 @@
-criar uma var a direita :: "_ Vou criar a entidade " :: é um objeto de uma entidade

@@ -1,8 +1,0 @@
-# ACESSO ENDPOINT NO NAVEGADOR
-> SINTAXE: 
-> <HOST><MODULO><RECURSO CONFIGURADO DE ROTA-STRING><OPCIONALID_QUANDO FOR BUSCAR POR ID VIA GET>
-> 
-exemplo:  http://localhost:3333/encomenda-test1/buscar-dado/Reinaldo
-
----
-
