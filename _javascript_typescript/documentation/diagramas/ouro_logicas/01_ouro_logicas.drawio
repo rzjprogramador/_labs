@@ -1,0 +1,49 @@
+<mxfile host="65bd71144e">
+    <diagram id="VTD9M-rFDHFU3o2OPtBa" name="Page-1">
+        <mxGraphModel dx="754" dy="1640" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="IMPORTACOES" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="14" y="155" width="360" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="CENARIO: arquivo :: importa referencias via import from" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="4">
+                    <mxGeometry y="26" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="CENARIO: funcao :: importa referencias/props via params" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="4">
+                    <mxGeometry y="52" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="FONTE NOVO DADO REFERENCIA : PARA EVOLUIR " style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="14" y="57" width="440" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="DENTRO DO METODO :: CAPTURANDO UMA INSTRUCAO E EVOLUI" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8">
+                    <mxGeometry y="26" width="440" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="DE FORA PARA DENTRO DO METODO : IMPORTANDO VIA PARAMS" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8">
+                    <mxGeometry y="52" width="440" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="VALIDACAO_CONFIGURAR COMO VAI EVOLUIR" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="14" y="254" width="720" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="DENTRO DO  METODO: VALIDAR ANTES DE CRIAR UM NO DESTA ENTIDADE PARA JA CRIAR CONFORME O CRITERIO." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="12">
+                    <mxGeometry y="26" width="720" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="FONTE DE DADO :: PARA EVOLUIR" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="346" y="-5" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="OBJETO : FORMAS DE FAZER UM OBJETO" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="14" y="336" width="484" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="FIXO SEM CONFIGURACAO :: De forma literal um objeto estatico." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
+                    <mxGeometry y="26" width="484" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="CONFIGURAVEL_FLEXIVEL_1:: instanciando uma Classe onde nela configuramos o Obj" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
+                    <mxGeometry y="52" width="484" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="CONFIGURAVEL_FLEXIVEL_2 :: atraves de funcao com retorno " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
+                    <mxGeometry y="78" width="484" height="26" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

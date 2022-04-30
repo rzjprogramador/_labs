@@ -1,0 +1,27 @@
+@import url(../css__global/global.css);
+
+:root {
+  /* Padding largura dentro do card */
+  --padding-c-card: 1rem;
+}
+
+.l-cards {
+  overflow: none; /* overflow para nao ter scroll para os lados */
+
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--min-tela), var(--max-tela))
+  );
+  justify-content: center;
+  justify-items: center;
+}
+
+.c-card {
+  background: var(--secondary-color);
+  padding: var(--padding-c-card);
+  /* padding-top: var(--padding); */
+  width: 100%;
+  height: 60vh;
+}

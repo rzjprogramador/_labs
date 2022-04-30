@@ -1,0 +1,79 @@
+<mxfile host="65bd71144e">
+    <diagram id="h-SRfGFFlCxTsZGx1QGf" name="Page-1">
+        <mxGraphModel dx="1052" dy="471" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="1- comecao no MODEL" style="text;whiteSpace=wrap;html=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="69" width="143" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="CADA MODULO DE ENTIDADE" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="13" width="191" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="classe modelo entidade: com campos que a entidade vai ter e gerar id na construcao se nao tiver" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="259" y="69" width="523" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="2- SERVICO- DO CASODEUSO" style="text;whiteSpace=wrap;html=1;strokeColor=#A50040;fillColor=#d80073;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="48" y="120" width="182" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="* terá&amp;nbsp; ContratoRecebimentoParam IRequest --&amp;nbsp;&amp;nbsp;descreve todos campos obrigatorios recebidos com eles da pra fazer um create , ...&lt;br&gt;&lt;br&gt;* terá classe do casoDeUsoService que vai integrar uma prop do tipo Contrator CasoDeUso Repositorio.&lt;br&gt;&lt;br&gt;* terá o metodo Execute fazendo o Recebimento das props do tipo IRequest" style="text;whiteSpace=wrap;html=1;strokeColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="261" y="120" width="524" height="353" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;b&gt;VERIFICA SE EXISTE O RECEBIMENTO&lt;/b&gt;&lt;br&gt;pegando a variavelIntegrada chamando o metodo do contrato que cria um deste e passando o obj que vai receber do Recebimento" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="272" y="231" width="323" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;b&gt;FASTFAIL ::&amp;nbsp; SE EXISTIR&amp;nbsp;&lt;/b&gt;&lt;br&gt;da uma mensagem de excessao // erro&lt;br&gt;&lt;br&gt;senao deixa evoluir para o que SIM que a classe se propoem a fazer" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="274" y="314" width="387" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;b&gt;MERGEA O OBJ COM OBJ-- DA REPO COM DO RECEBIMENTO&lt;/b&gt;&lt;br&gt;atraves da varIntegrada usa o metodo criador do ContratoRepo e passa o recebimento que espera o execute." style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="274" y="399" width="439" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="3- &lt;b&gt;REPOSITORIO&lt;/b&gt;--&lt;br&gt;CONTRATO- CASO DE&amp;nbsp; USO REPO" style="text;whiteSpace=wrap;html=1;strokeColor=#3700CC;fillColor=#6a00ff;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="48" y="507" width="202" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="* terá&amp;nbsp; DTO que sera o contrato do recebimento igual Irequest descreve todos campos obrigatorios recebidos com eles da pra fazer um create , ...&lt;br&gt;&lt;br&gt;* terá interface Contrato com os metodos para quem quer ser um Repositorio para Entidade&lt;br&gt;( quem implementar este COntrato pode ser um Repo ex: Repo em Memoria- RepoBanco )&amp;nbsp;" style="text;whiteSpace=wrap;html=1;strokeColor=#6666FF;" parent="1" vertex="1">
+                    <mxGeometry x="261" y="507" width="524" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="4- &lt;b&gt;REPOSITORIO&lt;/b&gt;--&lt;br&gt;ENTIDADE EM MEMORIA&lt;br&gt;CONCRETA IMPLEMENTACAO&lt;br&gt;BASE PARA IMPLEMENTACAO&lt;br&gt;REPO BANCO" style="text;whiteSpace=wrap;html=1;strokeColor=#3700CC;fillColor=#6a00ff;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="618" width="202" height="98" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="* sub-classe que vai implementar o Conrtato CasoDeUsoRepo&amp;nbsp;&lt;br&gt;mostrando para classe Banco como ela pode fazer do mesmo jeitto apra ser uma classe Repo&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="text;whiteSpace=wrap;html=1;strokeColor=#6666FF;" parent="1" vertex="1">
+                    <mxGeometry x="258" y="618" width="554" height="928" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;b&gt;DECLARA: O QUE VAI SER :: VARIAVEL DO BANCO EM MEMORIA&lt;br&gt;&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="269" y="665" width="439" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;b&gt;NA CONSTRUCAO :: &lt;/b&gt;&lt;br&gt;INICIALIZA: DANDO VALOR INICIAL ::&amp;nbsp; A VAR DO BANCO MEMORIA" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="281" y="702" width="516" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;b&gt;IMPLEMENTA METODOS DO CONTRATO DO REPO ::&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;strokeColor=#990000;" parent="1" vertex="1">
+                    <mxGeometry x="279" y="756" width="516" height="737" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;b&gt;CREATE () :: CRIADOR DE OUTRA ENTIDADE DESTA&lt;br&gt;&lt;/b&gt;- TEM O RECEBIMENTO DO DTO" style="text;whiteSpace=wrap;html=1;strokeColor=#006600;" parent="1" vertex="1">
+                    <mxGeometry x="289" y="797" width="490" height="308" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;b&gt;CRIA OBJ DA ENTIDADE :: &lt;/b&gt;&lt;br&gt;INSTANCIANDO PARA UM OBJ A CLASSE DA ENTIDADE" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="309" y="838" width="360" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;b&gt;ATRIBUI A&amp;nbsp; ESTE OBJ DA ENTIDADE&amp;nbsp; AS PROPS DO OBJ RECEBIDO POR PARAM&amp;nbsp;&lt;br&gt;&lt;/b&gt;&lt;br&gt;COM OBJECT ASSIGN&amp;nbsp; DO JS:&lt;br&gt;&lt;br&gt;MERGIANDO O OBJ DA ENTIDADE COM O OBJ&amp;nbsp; RECEBIDO PELO PARAM DA FUNCAO&lt;br&gt;&lt;br&gt;&lt;b&gt;DEIXANDO O OBJETO PRONTO&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="308.5" y="892" width="360" height="135" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;b&gt;INSERE ESTE OBJETO PRONTO NA COLECAO DESTA ENTIDADE :: &lt;/b&gt;&lt;br&gt;CHAMA A VAR-COLECAO DESTA CLASSE&amp;nbsp; FAZ UM PUSH DO OBJETO PRONTO&amp;nbsp;" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="306.5" y="1046" width="465" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;b&gt;LIST () :: LISTAR TODOS DESTA ENTIDADE&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;strokeColor=#006600;" parent="1" vertex="1">
+                    <mxGeometry x="285" y="1137" width="490" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;b&gt;UM GETTER:&lt;/b&gt;&lt;br&gt;RETORNA A VAR QUE REFERENCIA A COLECAO DESTA ENTIDAD&lt;b&gt;E&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="293" y="1179" width="420" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;b&gt;METODO AUX.&amp;nbsp;&lt;br&gt;BARRAR-DUPLICACAO DE&amp;nbsp; PROP PRIMITIVO (NOME) ANTES DE CRIAR&lt;br&gt;&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;strokeColor=#006600;" parent="1" vertex="1">
+                    <mxGeometry x="287" y="1276" width="490" height="197" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;b&gt;findByNome () -- procurarPorNome ()&lt;br&gt;&lt;/b&gt;&lt;br&gt;- NA VAR COLECAO FAZ UM FIND // PROCURAR ()&lt;br&gt;- RECEBENDO UM NOME&lt;br&gt;- ITERA&amp;nbsp;&lt;br&gt;- CRITERIO:&amp;nbsp; SE A PROP&amp;nbsp; QUE O ITERADOR SE APOSSOU FOR IGUAL A QUE ELE RECEBER NO RECEBIMENTO FAZ:&lt;br&gt;RETORNAR ESTE RESULTADO CAPTURADO&lt;br&gt;&lt;br&gt;" style="text;whiteSpace=wrap;html=1;strokeColor=#007FFF;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="1318" width="420" height="123" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

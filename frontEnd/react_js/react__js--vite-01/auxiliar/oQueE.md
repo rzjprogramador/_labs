@@ -1,0 +1,32 @@
+referenciaFuncao == referencia que chama a funcao sem os () normalmente ela só é execuatada atraves de evento 
+
+---
+# CLASSE DE FORMULARIO
+// FORM :: CLASSE  QUE TRAZ DENTRO OBJETOS DE FORMULARIO 
+// TEM O METODO ONSUBMIT / A ENVIAR ::  QUE AO CLICK DO BOTAO COM SUBMIT --ENVIA O FORMULARIO COM A FUNCAO REFERENCIADA
+<form onSubmit={ handleRegister }>
+
+# OBJETOS DE FORMULARIO ::
+
+
+// LABEL :: ETIQUETA :: MOSTRA O NOME ACIMA DO CAMPO
+<label>Nome da Tarefa</label>
+
+// INPUT :: OBJETO PARA ENVIAR VALORES - TEM PROPRIEDADES ::
+<input 
+
+// PLACEHOLDER :: TEXTO SINALIZADOR DENTRO DO INPUT
+placeholder="Digite a tarefa: "
+
+// VALUE :: PEGA O VALOR DIGITADO NO INPUT E ATRIBUI AO QUE FOR PASSADO SE FOR UMA REFERENCIA
+value={input}
+
+/* ONCHANGE :: PEGA O VALOR DIGITADO QUE ESTA NO VALUE DO INPUT E 
+ATRAVES DE UMA FUNCAO-ANONIMA RECEBE UM EVENTO E NO SET DO INPUT ENTREGA ESTE EVENTO.ALVO.comSeuVALOR
+*/
+onChange={ (e) => setInput(e.target.value) }
+/>
+
+
+// BUTTON :: QUANDO TYPE='SUBMIT' HABILITA O ENVIO DO FORMULARIO DEFINIDO COMO form onSubmi { referenciaEnvio }
+<button type="submit">Registrar</button>

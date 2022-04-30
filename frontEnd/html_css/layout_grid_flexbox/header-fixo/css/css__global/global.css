@@ -1,0 +1,13 @@
+:root {
+  --heightHeadermain: 10vh; /* define a altura do header */
+  --topBody: 2vh; /* define -  quanto o body vai abaixar abaixo do header calculado*/
+  --marginContainer: auto;
+  --widthContainer: 90%;
+}
+
+body {
+  background-color: green;
+  padding-top: calc(
+    var(--heightHeadermain) + var(--topBody)
+  ); /* para empurrar apra baixo os conteudos abaixo do header */
+}

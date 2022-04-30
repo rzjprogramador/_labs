@@ -1,0 +1,6 @@
+export enum StatusEntregaProtocol {
+  HA_RECOLHER = 'HA_RECOLHER',
+  ANALISE = 'ANALISE',
+  TRANSITANDO = 'TRANSITANDO',
+  ENTREGUE = 'ENTREGUE',
+}

@@ -1,0 +1,14 @@
+# SITE PRISMA.IO
+https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/using-prisma-migrate-typescript-postgres
+
+# CRIANDO SINGLETON PRISMA
+https://github.com/prisma/prisma/issues/5139
+
+traduzido singleton prisma
+https://github-com.translate.goog/prisma/prisma/issues/5139?_x_tr_sl=auto&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=wapp
+
+> SINGLETON APTTERN
+https://www.patterns.dev/posts/singleton-pattern/
+
+# MIGRACAO
+npx prisma migrate dev --name <nome da migracao>

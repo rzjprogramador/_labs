@@ -1,0 +1,120 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id              String    @id @default(uuid())
+  nome            String
+  estabelecimento String
+  email           String    @unique
+  password        String
+  createdAt       DateTime  @default(now())
+  ultimoLogin     DateTime?
+
+  cargo CargoUser @default(USER)
+
+  pedidos Pedidos[]
+
+}
+
+model Produtos {
+  id   String @id @default(uuid())
+  nome String @unique
+
+  preco_base  Float
+  acrescimo   Float
+  desconto    Float
+  preco_final Float
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  pedidos Pedidos[]
+
+  // ProdutoPedido ProdutoPedido[]
+
+
+}
+
+model Cidades {
+  id   String @id @unique @default(uuid())
+  nome String @unique
+
+  entregas Entregas[]
+}
+
+model Entregas {
+  id String @id @unique @default(uuid())
+
+  quantidade Int
+
+  remetente    String
+  destinatario String
+  logradouro   String
+  numero       String
+  complemento  String
+  cep          String
+  // cidade String
+  estado       String
+
+  pedidos Pedidos[]
+  cidades Cidades?  @relation(fields: [cidadesId], references: [id])
+
+  cidadesId String?
+}
+
+model Pedidos {
+  id   String @id @unique @default(uuid())
+  nome String
+
+  preco_base  Float
+  acrescimo   Float
+  desconto    Float
+  preco_final Float
+
+  statusEntrega StatusEntrega?
+  areaCobertura AreaCobertura?
+
+  author   Users  @relation(fields: [authorId], references: [id])
+  authorId String @map("author_id")
+
+  produtos  Produtos @relation(fields: [produtoId], references: [id])
+  produtoId String   @map("produto_id")
+
+  entregas   Entregas @relation(fields: [entregasId], references: [id])
+  entregasId String
+
+}
+
+// TODO ENTREGAS >> CIDADES
+
+// ENUMS
+
+enum CargoUser {
+  USER
+  ADMIN
+  MODERADOR
+  FUNCIONARIO
+  ENTREGADOR
+}
+
+enum StatusEntrega {
+  HA_RECOLHER
+  ANALISE
+  TRANSITANDO
+  ENTREGUE
+}
+
+enum AreaCobertura {
+  APROVADO
+  INDISPONIVEL
+}
+

@@ -1,0 +1,2 @@
+# api_graphql_essencial_Funcional
+api_graphql_essencial_Funcional com Typescript

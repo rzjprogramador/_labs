@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+
+    #POSTGRES
+    mixflex_postgres_compose:
+        image: postgres:12.4-alpine
+        container_name: mixflex_postgres
+        environment:
+            POSTGRES_PASSWORD: "senha"
+        ports:
+            - "5440:5432"
+        volumes:
+            - "./dockerizando/postgres:/var/lib/dockerizando-pc/mixflex_postgres"
+        networks:
+            - "rede_rzj_mixflex"
+
+#REDE
+networks:
+    rede_rzj_mixflex:
+        driver: "bridge"

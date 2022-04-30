@@ -1,0 +1,26 @@
+/* 
+Mixin : são funcoes que retornam escrita de css ao inves de valor - aceitam parametros :: se precisa d evariaveis use
+Placeholders : são funcoes que retornam escrita de css ao inves de valor,
+mas a diferenca para mixin é que ao compilar apra css ele nao repete codigo fica menor o final 
+não tem como usar parametros :: senao precisa de variaveis nao use, use mixin.
+*/
+%centerBlock {
+  display: block;
+  margin: auto;
+  background-color: aquamarine;
+}
+
+%centerFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: blueviolet;
+}
+
+// uso placeholders
+// @extend %center;
+
+.container2 {
+  @extend %centerFlex;
+}

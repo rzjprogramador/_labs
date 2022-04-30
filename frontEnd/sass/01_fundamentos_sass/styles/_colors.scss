@@ -1,0 +1,15 @@
+// colors: obs: todas as cores :: os primeiros items tem que ser numero > ou < 70
+
+/* CORES SEMI-FIXAS -- Obs: Se editar manter o que é claro e escuro */
+$light: #e1e1e1; 
+$dark: #070707; 
+
+/* Theme */
+$default-color: #e1e1e1; // bg-principal
+
+$primary-color: #240870;
+$secondary-color: #620080;
+
+// use funcoes
+$primary-ligthenDarkenColor: ligthenDarkenColor($primary-color, 5%, 50%);
+$secondary-ligthenDarkenColor: ligthenDarkenColor($secondary-color, 25%, 50%);

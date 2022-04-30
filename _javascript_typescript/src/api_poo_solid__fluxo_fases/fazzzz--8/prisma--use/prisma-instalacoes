@@ -1,0 +1,4 @@
+INSTALAR OU ATUALIZAR:
+
+npm i -D prisma@latest                       │
+npm i @prisma/client@latest

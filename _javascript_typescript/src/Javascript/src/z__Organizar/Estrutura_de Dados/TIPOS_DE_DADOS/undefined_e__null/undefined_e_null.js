@@ -1,0 +1,7 @@
+/* TIPOS DE DADOS  UNDEFINED e NULL */
+
+
+/* undefined / indefinido == PROPRIEDADE QUE AINDA NAO EXISTE  */
+
+
+/* null / nulo == VALOR QUE NAO FOI PASSADO -- É NULO A PROP EXISTE MAS NÃO PASSA VALOR AINDA - ESTÁ VAZIA  */

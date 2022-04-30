@@ -1,0 +1,37 @@
+/* Reset */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Cores */
+:root {
+  --light: #fafafa;
+  --dark: #070707;
+
+  --contrastDark: #fafafa;
+  --contrastLight: #070707;
+
+  --color-primary: #ce00ac;
+  --color-secondary: #157744;
+  --color-terceary: #e01a00;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--contrastLight);
+}
+
+/* Texto Responsivo */
+h1 {
+  font-size: min(150px 10vw); 
+}
+
+h2 {
+  font-size: max(60px 5vw); /* max() pega o maior valor entre os 2 passados - min() pega o menor valor entre os 2 passados  */
+}
+
+p {
+  font-size: max(8px 2vw);
+}

@@ -1,0 +1,1 @@
+# svelte__Calculadora__essencial

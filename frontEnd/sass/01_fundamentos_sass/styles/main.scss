@@ -1,0 +1,51 @@
+@import "reset", "fonts", "variables", "colors", "placeholders", "mixins",
+  "maps", "funcoes";
+// @import "./comp1";
+
+body {
+  background: $default-color;
+  color: setTextColor($default-color);
+
+  .container {
+    @include flexCenter(column); // mixin com params
+
+    h1 {
+      color: setTextColor($default-color);
+      // font-size: clamp(1.75em, 1em + 3vw, 4.5em); // nao esta deixando calcular + o vw
+      font-size: clamp(1.75em, 1em, 4.5em);
+      font-weight: pesoFonte(bold);
+    }
+    p {
+      color: setTextColor($default-color);
+      // font-size: clamp(1em, 1em + 1vw, 1.25em); // nao esta deixando calcular + o vw
+      font-size: clamp(1em, 1em, 1.25em);
+    }
+    a {
+      color: $secondary-color;
+    }
+
+    .container3 {
+      @extend %centerBlock;
+    }
+
+    .container4 {
+      @extend %centerFlex;
+    }
+
+    .c5 {
+      // @extend %comp0
+    }
+  }
+
+  .boxUm {
+    background-color: ligthenDarkenColor($primary-color, 5%, 50%);
+    color: setTextColor(ligthenDarkenColor($primary-color, 5%, 50%));
+    padding: 2rem;
+  }
+
+  .boxDois {
+    background-color: ligthenDarkenColor($secondary-color, 25%, 50%);
+    color: setTextColor(ligthenDarkenColor($secondary-color, 25%, 50%));
+    padding: 2rem;
+  }
+}

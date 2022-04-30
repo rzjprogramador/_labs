@@ -1,0 +1,7 @@
+export enum CargoUserProtocol {
+  USER = 'USER',
+  ADMIN = 'ADMIN',
+  MODERADOR = 'MODERADOR',
+  FUNCIONARIO = 'FUNCIONARIO',
+  ENTREGADOR = 'ENTREGADOR',
+}

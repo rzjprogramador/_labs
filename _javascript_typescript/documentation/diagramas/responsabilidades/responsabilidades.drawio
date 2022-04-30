@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e">
+    <diagram id="RXfR9IZl_pyl9z1jR86i" name="Page-1">
+        <mxGraphModel dx="1083" dy="1769" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="&lt;h1 style=&quot;font-size: 11px;&quot;&gt;&lt;div style=&quot;color: rgb(248, 248, 242); background-color: rgb(25, 22, 34); font-family: &amp;quot;jetbrains mono&amp;quot;, &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 11px; line-height: 24px;&quot;&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color: rgb(189, 147, 249); font-size: 11px;&quot;&gt;categoriasRepository&lt;/span&gt; &lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: rgb(255, 121, 198); font-weight: bold; font-size: 11px;&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: rgb(139, 233, 253); font-size: 11px;&quot;&gt;CategoriasRepository&lt;/span&gt;()&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(98, 114, 164); font-size: 11px;&quot;&gt;/* ROTAS */&lt;/span&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(98, 114, 164); font-size: 11px;&quot;&gt;/*&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(98, 114, 164); font-size: 11px;&quot;&gt;* CRIAR CATEGORIA&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(98, 114, 164); font-size: 11px;&quot;&gt;*/&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(189, 147, 249); font-size: 11px;&quot;&gt;categoriasRoutes&lt;/span&gt;.&lt;span style=&quot;color: rgb(80, 250, 123); font-size: 11px;&quot;&gt;post&lt;/span&gt;(&lt;span style=&quot;color: rgb(233, 242, 132); font-size: 11px;&quot;&gt;'&lt;/span&gt;&lt;span style=&quot;color: rgb(241, 250, 140); font-size: 11px;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;color: rgb(233, 242, 132); font-size: 11px;&quot;&gt;'&lt;/span&gt;, (&lt;span style=&quot;color: rgb(255, 184, 108); font-style: italic; font-size: 11px;&quot;&gt;request&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;:&lt;/span&gt; &lt;span style=&quot;color: rgb(139, 233, 253); font-style: italic; font-size: 11px;&quot;&gt;Request&lt;/span&gt;, &lt;span style=&quot;color: rgb(255, 184, 108); font-style: italic; font-size: 11px;&quot;&gt;response&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;:&lt;/span&gt; &lt;span style=&quot;color: rgb(139, 233, 253); font-style: italic; font-size: 11px;&quot;&gt;Response&lt;/span&gt;) &lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;=&amp;gt;&lt;/span&gt; {&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;    &lt;span style=&quot;color: rgb(98, 114, 164); font-size: 11px;&quot;&gt;// 1- RECEBER&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;    &lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;const&lt;/span&gt; { &lt;span style=&quot;color: rgb(189, 147, 249); font-size: 11px;&quot;&gt;nome&lt;/span&gt;, &lt;span style=&quot;color: rgb(189, 147, 249); font-size: 11px;&quot;&gt;descricao&lt;/span&gt; } &lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: rgb(255, 184, 108); font-style: italic; font-size: 11px;&quot;&gt;request&lt;/span&gt;.body&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;    &lt;span style=&quot;color: rgb(98, 114, 164); font-size: 11px;&quot;&gt;// SERVICO RECEBENDO AS PROPS DO REPO&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;    &lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color: rgb(189, 147, 249); font-size: 11px;&quot;&gt;createCategoriaServico&lt;/span&gt; &lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: rgb(255, 121, 198); font-weight: bold; font-size: 11px;&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: rgb(139, 233, 253); font-size: 11px;&quot;&gt;CreateCategoriaService&lt;/span&gt;(&lt;span style=&quot;color: rgb(189, 147, 249); font-size: 11px;&quot;&gt;categoriasRepository&lt;/span&gt;)&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;    &lt;span style=&quot;color: rgb(98, 114, 164); font-size: 11px;&quot;&gt;// MERGIAR COM METODO VINDO DO SERVICO&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;    &lt;span style=&quot;color: rgb(189, 147, 249); font-size: 11px;&quot;&gt;createCategoriaServico&lt;/span&gt;.&lt;span style=&quot;color: rgb(80, 250, 123); font-size: 11px;&quot;&gt;execute&lt;/span&gt;({ nome, descricao })&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;    &lt;span style=&quot;color: rgb(98, 114, 164); font-size: 11px;&quot;&gt;// 4- RESPONDER&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;    &lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: rgb(255, 184, 108); font-style: italic; font-size: 11px;&quot;&gt;response&lt;/span&gt;.&lt;span style=&quot;color: rgb(80, 250, 123); font-size: 11px;&quot;&gt;status&lt;/span&gt;(&lt;span style=&quot;color: rgb(189, 147, 249); font-size: 11px;&quot;&gt;201&lt;/span&gt;).&lt;span style=&quot;color: rgb(80, 250, 123); font-size: 11px;&quot;&gt;json&lt;/span&gt;({ message&lt;span style=&quot;color: rgb(255, 121, 198); font-size: 11px;&quot;&gt;:&lt;/span&gt; &lt;span style=&quot;color: rgb(233, 242, 132); font-size: 11px;&quot;&gt;'&lt;/span&gt;&lt;span style=&quot;color: rgb(241, 250, 140); font-size: 11px;&quot;&gt;CRIADO COM SUCESSO&lt;/span&gt;&lt;span style=&quot;color: rgb(233, 242, 132); font-size: 11px;&quot;&gt;'&lt;/span&gt; })&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;})&lt;/div&gt;&lt;/div&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=#FF66FF;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;strokeWidth=5;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="-400" width="530" height="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Por RECURSO DE ROTA" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="40" y="-300" width="581" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="1- GLOBAL//ARQUIVO OBJETO INSTANCIADO DE QUEM OBEDECE CONTRATO REPO" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="136" y="-360" width="454" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="2- RECEBER CAMPOS DO PEDIDO__PARA A ROTA" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="149" y="-268" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="3- RECEBER CAMPOS DO PEDIDO__PARA O SERVICO CASODEUSO&lt;br&gt;- passando para a instanciacao do CasoDeUso o obj do repositorio" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="159" y="-208" width="410" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="4- MERGIAR CAMPOS COM METODO EXECUTE() -- VINDO DO OBJ DO CASODEUSO" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="159" y="-128" width="416" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="5- RESPONDER API E ROTA" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="159" y="-58" width="417" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="RESPONSABILIDADES POR ROTA" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="364" y="-480" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="REQUEST" style="text;html=1;strokeColor=#005700;fillColor=#006600;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="67" y="-268" width="72" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="SERVICO" style="text;html=1;strokeColor=#005700;fillColor=#003300;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="67" y="-211" width="72" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="SERVICO" style="text;html=1;strokeColor=#3700CC;fillColor=#330033;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="68" y="-130" width="72" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="RESPONSE" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="67" y="-59" width="72" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="GLOBAL ARQ" style="text;html=1;strokeColor=#A50040;fillColor=#d80073;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="32" y="-360" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="rotaObj" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="199" y="-294" width="72" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="metodo ( )" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="281" y="-294" width="61" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="/ brekpoint" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="354" y="-294" width="72" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="param-entrada" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="434" y="-294" width="91" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="param-saida" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="533" y="-293" width="73" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

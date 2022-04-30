@@ -1,0 +1,30 @@
+@import url(../css__global/global.css);
+:root {
+  --radius: 5%;
+  --padding: 1rem;
+
+  --min: 300px;
+  --max: 1fr;
+
+  --cor1: red;
+  --cor2: aqua;
+}
+
+.l-cards {
+  background: yellow;
+  width: var(--widthContainer);
+  margin: var(--marginContainer);
+
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min), var(--max)));
+  justify-content: center;
+  justify-items: center;
+}
+
+.c-card {
+  background: var(--cor1);
+  padding-top: var(--padding);
+  width: 100%;
+  height: 60vh;
+}

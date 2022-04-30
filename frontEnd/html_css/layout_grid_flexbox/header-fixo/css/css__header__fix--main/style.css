@@ -1,0 +1,11 @@
+@import url(../css__global/global.css);
+
+.header__fix--main {
+  background-color: orange;
+  /* padding: 2rem; */
+
+  width: 100vw;
+  height: var(--heightHeadermain);
+  position: fixed;
+  top: 0;
+}

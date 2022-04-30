@@ -1,0 +1,16 @@
+
+
+// ATRIBUINDO AS PROPS DO OBJETO PARA MERGIAR COM O RECEBIDO DA REQUISICAO
+        // METODO DE ATRIBUICAO CLASSE-OBJETO :: Object.assign passando o objeto que traz a classe , e os campos. SOMENTE ASSIM AO ATRIBUIR VEM O CAMPO ID NA REQUISICAO
+
+        // EXEMPLO::
+
+        Object.assign(categoria, {
+            nome, descricao, created_at: new Date()
+        })
+
+---
+
+# MERGIAR
+// OBJ COM OBJ - OBJETO DO PEDIDO QUE VEM VIA PARAM--> COM OBJETO LITERAL OU ALGO QUE FAZ OBJ EX:
+UMA INSTANCIA DE UMA CLASSE COM NOME REPOSITORIO - QUE VAI TER OS CAMPOS PARA FAZER MATCH.

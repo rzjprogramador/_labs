@@ -1,0 +1,39 @@
+{
+  "name": "api_graphql_essencial_Funcional",
+  "version": "1.0.0",
+  "description": "api_graphql_essencial_Funcional com Typescript",
+  "main": ".prettierrc.js",
+  "scripts": {
+    "dev": "tsnd --transpile-only --ignore-watch node_modules src/infra/server/server.ts",
+    "test": "jest",
+    "test:silent": "jest --watchAll --silent --noStackTrace"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzjprogramador/api_graphql_essencial_Funcional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rzjprogramador/api_graphql_essencial_Funcional/issues"
+  },
+  "homepage": "https://github.com/rzjprogramador/api_graphql_essencial_Funcional#readme",
+  "dependencies": {
+    "apollo-server": "^3.1.2",
+    "class-validator": "^0.13.1",
+    "graphql": "^15.5.1",
+    "mongoose": "^5.13.7",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/mongoose": "^5.11.97",
+    "dotenv": "^10.0.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+}

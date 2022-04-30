@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+
+<style>
+    /*Flex para Items ========================================*/
+
+    /*Flex para Container MANIOPULAR SEUS FILHOS ========================================*/
+    #container {
+        height: 300px;
+        background: orange;
+        padding: 1rem;
+
+        display: flex;
+
+        flex-direction: row;
+        align-items: stretch; 
+        /* /// flex-end // flex-start // strach :: Ocupa todo espaço de cima e embaixo///  Obs: Só da Align Items se tiver altura height definida--  QUANDO O DIRECTION ESTA COM ROW(Padrao) O ALIGN É VERTICAL (em Pé)  --QUANDO ESTA COM COLUMN O ALINHAMENTO É HORIZONTAL (Deitado) */
+        
+        justify-content: center; 
+        /* center -- space-between -- /// center = ALINHA AO CENTRO NO MEIO --space-between espalha as divs para cada lado preenchendo tudo */
+        
+         flex-wrap: wrap;
+         /* flex-wrap: wrap; Quebra no Container Pai -- Quebra a linha dos items filhos se o tamanho dos items for pelo menos 2 vezes menor que a tela no caso a largura de 150px de cada item quebrou em linhas  
+         Para funciobnar tem que ser no Pai e nao ter flex: 1 ou outros nos filhos --Porque o flex1 vai tentar ajustar todos items filhos
+         E tbm precisa de uma largura whidth definida ou calculada min-max.
+         
+         */
+
+
+
+        }
+
+    /*Flex para Items ========================================*/
+    .item {
+        background: blueviolet ; 
+        color: white;
+        padding: 1rem;
+        border: 1px solid white;
+
+        /* flex: 1; */
+        /* flex: 1; OS ITEMS SE ESPALHA E PREENCHE TODO ESPAÇO DO PAI
+        o flex é uma junção do flex-grow padrao 0 ; flex-shrink:1 ou inhent baseado no Pai; flex-basis: auto; --recomendado usar somente o flex 1 ou mais mesmo.
+         */
+
+         width:150px;
+        
+        }
+        .item--effect {
+            /* flex: 4; */
+            /* flex: 2; o item com flex 2 tera o dobro de tamanho dos com flex 1 */
+       
+            /* order: 5; */
+            /* order vai ordenar um item especifico nao faz sentido colocar em todos items..com ele vc escolhe a ordem que ser seu item desta classe */
+            
+            /* align-self: stretch; */
+            /* align-self: stretch; sobreescreve o align-item do container Pai , então melhor usar em classe separada de items --colocando um stretch aqui esta unica div vai ocupar toda altura da div Pai 
+            Ainda tem end --center--start
+            */
+        
+        }
+
+    /*=====================================================*/
+    
+
+
+</style>
+
+<body>
+    <div id="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item item--effect ">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    
+</body>
+</html>
