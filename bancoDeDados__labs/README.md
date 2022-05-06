@@ -1,2 +1,0 @@
-# bancoDeDados__labs
-bancoDeDados__labs
