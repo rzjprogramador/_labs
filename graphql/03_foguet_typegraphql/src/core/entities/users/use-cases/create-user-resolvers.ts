@@ -1,19 +1,19 @@
 import { Resolver, Query, Mutation, Arg } from 'type-graphql'
-import { User } from '../models/user'
+import { Users } from '../domain/users.entity'
 
 import crypto from 'crypto'
 
 @Resolver()
 export class UserResolvers {
 
-  private collectionUser: User[] = []
+  private collectionUser: Users[] = []
 
-  @Query(() => [User])
+  @Query(() => [Users])
   async users() {
     return this.collectionUser
   }
 
-  @Mutation(() => User)
+  @Mutation(() => Users)
   async createUser (
     @Arg('nome') nome: string,
     @Arg('idade') idade: number

@@ -4,7 +4,7 @@ import path from 'path'
 import { buildSchema } from 'type-graphql'
 import { ApolloServer } from 'apollo-server'
 
-import { UserResolvers } from './core/entities/users/resolvers/user_resolver'
+import { UserResolvers } from './core/entities/users/use-cases/create-user-resolvers'
 
 async function main () {
   const schema = await buildSchema({

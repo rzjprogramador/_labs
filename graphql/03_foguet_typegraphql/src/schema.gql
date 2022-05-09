@@ -4,14 +4,14 @@
 # -----------------------------------------------
 
 type Mutation {
-  createUser(idade: Float!, nome: String!): User!
+  createUser(idade: Float!, nome: String!): Users!
 }
 
 type Query {
-  users: [User!]!
+  users: [Users!]!
 }
 
-type User {
+type Users {
   id: ID!
   idade: Float!
   nome: String!
