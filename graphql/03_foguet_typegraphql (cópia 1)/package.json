@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts",
-    "start": "node dist/src/index.js",
-    "build": "tsc -p tsconfig-build.json"
+    "dev": "ts-node-dev--transpile-only --ignore-watch node_modules src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,18 +13,12 @@
     "apollo-server": "^3.6.7",
     "class-validator": "^0.13.2",
     "graphql": "^15.8.0",
-    "module-alias": "^2.2.2",
     "reflect-metadata": "^0.1.13",
-    "tsconfig-paths": "^4.0.0",
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.24",
-    "jest": "^28.1.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.6.3"
-  },
-  "_moduleAliases": {
-    "@": "dist"
   }
 }
