@@ -1,0 +1,4 @@
+caminhos mapeados por enquanto só nao esta funcionando nos arquivos resolvers
+que tem a sintaxe do typegraphql.
+ex: create-users.resolvers.ts
+---

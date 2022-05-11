@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  #POSTGRES
+  pgm1_compose:
+    image: postgres:12.4-alpine
+    container_name: ${PROJETO}
+    environment:
+      POSTGRES_PASSWORD: ${SENHA_DB}
+    ports:
+      - "5440:5432"
+    volumes:
+      - "./dockerizando/${PROJETO}:/var/lib/dockerizando-pc/${PROJETO}"
+    networks:
+      - "${PROJETO}"
+
+#REDE
+networks:
+  pgm1:
+    driver: "bridge"
