@@ -1,8 +1,8 @@
 import { Field, ID, ObjectType } from "type-graphql";
-import { UsersProtocol } from "../protocols/users.protocol";
+import { IUsers } from "./contracts/users.protocol";
 
 @ObjectType()
-export class Users implements UsersProtocol {
+export class Users implements IUsers {
   @Field(() => ID)
   id?: string
 

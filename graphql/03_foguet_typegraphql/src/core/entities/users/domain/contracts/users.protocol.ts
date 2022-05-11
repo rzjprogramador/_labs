@@ -1,4 +1,4 @@
-export interface UsersProtocol {
+export interface IUsers {
   id?: string;
   nome: string;
   sobrenome: string;

@@ -3,12 +3,14 @@ import { Resolver, Query, Mutation, Arg } from "type-graphql";
 
 import { Users } from "../../domain/users.entity";
 
-import { CreateUsersServiceProtocol } from "../../protocols/create-users-service-protocols";
-
 import createUserServiceController from "./main";
 
 @Resolver()
 export class CreateUserResolvers {
+  //
+  private dbData: Users[] = [];
+  //
+
   @Mutation(() => Users)
   createUser(
     @Arg("nome") nome: string,
@@ -24,13 +26,19 @@ export class CreateUserResolvers {
       password,
     };
 
+    this.dbData.push(user); // INSERIR NO DB FAKE
+
     return createUserServiceController().createUsers(user);
   }
 
+  //
+
   @Query(() => [Users])
   async allUsers() {
-    return createUserServiceController().allUsers();
+    return this.dbData; // RETORNANDO O BD FAKE
   }
+
+  //
 }
 
 /*

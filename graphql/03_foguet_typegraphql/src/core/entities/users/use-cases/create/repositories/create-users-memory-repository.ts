@@ -1,16 +1,14 @@
-import { Users } from "../../../domain/users.entity";
-import { CreateUsersRepositoryProtocol } from "../../../protocols/create-users-repository-protocols";
-import { UsersDTO } from "../../../protocols/users-dto";
+import { CreateUsersRepositoryProtocol } from "../contracts/create-users-repository-protocols";
+import { CreateUsersDTO } from "../contracts/create-users-dto";
 
 export class CreateUsersRepositoryMemory
   implements CreateUsersRepositoryProtocol
 {
-  public userCollection: Users[] = [];
+  // public userCollection: Users[] = [];
 
-  // constructor(private readonly dbUsersMemory: CreateUsersRepositoryProtocol) {}
+  createUsers(data: CreateUsersDTO) {
+    const { nome, sobrenome, email, password } = data;
 
-  createUsers({ nome, sobrenome, email, password }: UsersDTO) {
-    // this.userCollection.push(user);
     const newUser = {
       nome,
       sobrenome,
@@ -18,11 +16,16 @@ export class CreateUsersRepositoryMemory
       password,
     };
 
-    this.userCollection.push(newUser);
+    // this.userCollection.push(newUser);
+
     return newUser;
   }
 
-  allUsers(): Users[] {
-    return this.userCollection;
-  }
+  //
+
+  // allUsers(): Users[] {
+  //   // return this.userCollection;
+  // }
+
+  //
 }

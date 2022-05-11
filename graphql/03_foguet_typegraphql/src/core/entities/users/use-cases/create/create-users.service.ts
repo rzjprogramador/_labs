@@ -1,21 +1,21 @@
 import crypto from "crypto";
 
 import { Users } from "../../domain/users.entity";
-import { CreateUsersRepositoryProtocol } from "../../protocols/create-users-repository-protocols";
-import { CreateUsersServiceProtocol } from '../../protocols/create-users-service-protocols';
-import { UsersDTO } from "../../protocols/users-dto";
+import { CreateUsersRepositoryProtocol } from "./contracts/create-users-repository-protocols";
+import { CreateUsersServiceProtocol } from "./contracts/create-users-service-protocols";
+import { CreateUsersDTO } from "./contracts/create-users-dto";
 
 export class CreateUserService implements CreateUsersServiceProtocol {
   constructor(
     private readonly dbUsersRepository: CreateUsersRepositoryProtocol
   ) {}
+  allUsers(): Users[] {
+    throw new Error("Method not implemented.");
+  }
 
-  async createUsers({
-    nome,
-    sobrenome,
-    email,
-    password,
-  }: UsersDTO): Promise<Users> {
+  async createUsers(data: CreateUsersDTO): Promise<Users> {
+    const { nome, sobrenome, email, password } = data;
+
     return this.dbUsersRepository.createUsers({
       id: crypto.randomUUID(),
       nome,
@@ -25,20 +25,5 @@ export class CreateUserService implements CreateUsersServiceProtocol {
     });
   }
 
-  allUsers(): Users[] {
-    return this.dbUsersRepository.allUsers();
-  }
-
-  // @Mutation(() => Users)
-  // async createUser(@Arg("nome") nome: string, @Arg("idade") idade: number) {
-  //   const user = { id: crypto.randomUUID(), nome: nome, idade: idade };
-
-  //   this.collectionUser.push(user);
-  //   return user;
-  // }
-
-  // @Query(() => [Users])
-  // async users() {
-  //   return this.collectionUser;
-  // }
+  //
 }

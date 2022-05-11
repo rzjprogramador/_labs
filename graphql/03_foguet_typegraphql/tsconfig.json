@@ -12,10 +12,11 @@
     "rootDirs": ["src", "tests"],
     "baseUrl": "src",
     "paths": {
-      "@/tests/*": ["../tests/*"],
       "@/*": ["*"]
     }
   },
+
+  "typeRoots": ["node_modules/@types"],
 
   "include": ["src", "tests"],
   "exclude": []
