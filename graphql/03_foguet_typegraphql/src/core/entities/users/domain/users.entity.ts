@@ -3,7 +3,7 @@ import { UsersProtocol } from "../protocols/users.protocol";
 
 @ObjectType()
 export class Users implements UsersProtocol {
-  @Field(() => String)
+  @Field(() => ID)
   id?: string
 
   @Field(() => String)

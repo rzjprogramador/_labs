@@ -1,16 +1,14 @@
 import crypto from "crypto";
 import { Resolver, Query, Mutation, Arg } from "type-graphql";
 
-import { Users } from "../domain/users.entity";
+import { Users } from "../../domain/users.entity";
 
-import { CreateUsersServiceProtocol } from "../protocols/create-users-service-protocols";
+import { CreateUsersServiceProtocol } from "../../protocols/create-users-service-protocols";
+
+import createUserServiceController from "./main";
 
 @Resolver()
-// const createUserResolvers = createUserResolvers();
 export class CreateUserResolvers {
-  private collectionUser: Users[] = []; // TENTAR DPS INJECAO
-  constructor(private readonly dbUsersService: CreateUsersServiceProtocol) {}
-
   @Mutation(() => Users)
   createUser(
     @Arg("nome") nome: string,
@@ -26,15 +24,12 @@ export class CreateUserResolvers {
       password,
     };
 
-    const newUser = this.collectionUser.push(user);
-
-    // const newUser = this.collectionUser.createUsers(user);
-    return newUser;
+    return createUserServiceController().createUsers(user);
   }
 
   @Query(() => [Users])
   async allUsers() {
-    return this.dbUsersService.allUsers();
+    return createUserServiceController().allUsers();
   }
 }
 

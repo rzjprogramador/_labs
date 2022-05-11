@@ -1,9 +1,9 @@
 import crypto from "crypto";
 
-import { Users } from "../domain/users.entity";
-import { CreateUsersRepositoryProtocol } from "../protocols/create-users-repository-protocols";
-import { CreateUsersServiceProtocol } from '../protocols/create-users-service-protocols';
-import { UsersDTO } from "../protocols/users-dto";
+import { Users } from "../../domain/users.entity";
+import { CreateUsersRepositoryProtocol } from "../../protocols/create-users-repository-protocols";
+import { CreateUsersServiceProtocol } from '../../protocols/create-users-service-protocols';
+import { UsersDTO } from "../../protocols/users-dto";
 
 export class CreateUserService implements CreateUsersServiceProtocol {
   constructor(

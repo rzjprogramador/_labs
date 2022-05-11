@@ -1,6 +1,6 @@
-import { Users } from "../domain/users.entity";
-import { CreateUsersRepositoryProtocol } from "../protocols/create-users-repository-protocols";
-import { UsersDTO } from "../protocols/users-dto";
+import { Users } from "../../../domain/users.entity";
+import { CreateUsersRepositoryProtocol } from "../../../protocols/create-users-repository-protocols";
+import { UsersDTO } from "../../../protocols/users-dto";
 
 export class CreateUsersRepositoryMemory
   implements CreateUsersRepositoryProtocol
