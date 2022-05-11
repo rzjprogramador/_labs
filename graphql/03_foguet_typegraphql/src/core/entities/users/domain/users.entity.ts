@@ -1,15 +1,20 @@
-import { Field, ID, ObjectType } from 'type-graphql'
+import { Field, ID, ObjectType } from "type-graphql";
+import { UsersProtocol } from "../protocols/users.protocol";
 
 @ObjectType()
-export class Users {
+export class Users implements UsersProtocol {
+  @Field(() => String)
+  id?: string
 
-  @Field(type => ID)
-  id: string
+  @Field(() => String)
+  nome: string;
 
-  @Field()
-  nome: string
+  @Field(() => String)
+  sobrenome: string;
 
-  @Field()
-  idade: number
+  @Field(() => String)
+  email: string;
 
+  @Field(() => String)
+  password: string;
 }

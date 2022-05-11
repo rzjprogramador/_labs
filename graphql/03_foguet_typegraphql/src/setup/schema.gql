@@ -4,15 +4,17 @@
 # -----------------------------------------------
 
 type Mutation {
-  createUser(idade: Float!, nome: String!): Users!
+  createUser(email: String!, nome: String!, password: String!, sobrenome: String!): Users!
 }
 
 type Query {
-  users: [Users!]!
+  allUsers: [Users!]!
 }
 
 type Users {
-  id: ID!
-  idade: Float!
+  email: String!
+  id: String!
   nome: String!
+  password: String!
+  sobrenome: String!
 }
