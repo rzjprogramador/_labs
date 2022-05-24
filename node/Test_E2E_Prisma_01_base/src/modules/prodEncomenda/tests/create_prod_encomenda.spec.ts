@@ -22,19 +22,7 @@ describe('ProdEncomenda', () => {
   await expect(inMemoryPrismaProdEncomendaRepository.items).toEqual(expect.arrayContaining([
     expect.objectContaining({
       nome: 'prod_encomenda_01', preco: 15  
-    })
-
-    /*
-    - FUI NA VARIAVEL DO ARRAY : expect(inMemoryPrismaProdEncomendaRepository.items)
-    - FUI DENTRO DO ARRAY :: .toEqual(expect.arrayContaining([
-
-    - VERIFIQUEI SE LA DENTRO FOI CRIADO O OBJETO COM OS DADOS IGUAIS DA CRIACAO ::
-    expect.objectContaining({
-      nome: 'prod_encomenda_01', preco: 15  
-    })
-
-    */
-   
+    }) 
   ]))
 
   }) // 
