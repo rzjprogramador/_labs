@@ -3,7 +3,7 @@ import { InMemoryPrismaProdEncomendaRepository } from '../../../../tests_in_memo
 
 describe('ProdEncomenda', () => {
 
-  test('Criar novo ProdEncomenda', async () => {
+  test('SUCESSO: Criar novo ProdEncomenda', async () => {
     // FAÇO A INVERSAO DE DEPENNCIA NORMAL E DOU PARA OS ERVICO O REPO INMEMORY
 
     const inMemoryPrismaProdEncomendaRepository = new InMemoryPrismaProdEncomendaRepository()
@@ -37,9 +37,23 @@ describe('ProdEncomenda', () => {
    
   ]))
 
-  })
+  }) // 
+ 
 
-  
+  test('FALHA: Não Criar novo ProdEncomenda com nome invalido', async () => {
+
+    const inMemoryPrismaProdEncomendaRepository = new InMemoryPrismaProdEncomendaRepository()
+    const createProdEncomenda = new CreateProdEncomenda(inMemoryPrismaProdEncomendaRepository)
+
+    await expect(createProdEncomenda.execute({ nome: '', preco: 15 }))
+    .rejects
+    .toThrow()
+
+    // É PRA FALHAR - ENTÃO CAPTURO COM REJECTS -- ESPERO QUE MEU ARRAY ESTEJA VAZIO SE O NOME NÃO FOR IGUAL OA PASSADO -- É PRA NAO CRIAR NADA
+
+   expect(inMemoryPrismaProdEncomendaRepository.items).toEqual(expect.arrayContaining([ ]))
+
+  }) // 
 
 
 })
