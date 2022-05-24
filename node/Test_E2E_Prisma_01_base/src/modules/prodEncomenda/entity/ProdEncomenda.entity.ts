@@ -1,5 +1,6 @@
 export class ProdEncomenda {
   idDB?: string
+  id?: string
   nome: string
   preco: number
 

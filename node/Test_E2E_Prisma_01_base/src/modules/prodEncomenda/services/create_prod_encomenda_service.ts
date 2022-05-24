@@ -5,7 +5,7 @@ export interface CreateProdEncomendaRequest {
   preco: number
 }
 
-export class CreateProdEncomendaService {
+export class CreateProdEncomenda {
   constructor(
     private readonly prodEncomendaRepository: ProdEncomendaRepository
   ) {}
@@ -13,7 +13,7 @@ export class CreateProdEncomendaService {
   async execute({ nome, preco }: CreateProdEncomendaRequest) {
     // VALIDACOES
     // VERIFICAR SE JA EXISTE O QUE ESTA SENDO CRIADO
-    
+
     if(!nome) {
       throw new Error('Nome é obriagtorio')
     }
