@@ -1,0 +1,45 @@
+### 
+# -------------------------------------
+# CADASTRAR DADO
+POST {{host}}/dado
+Content-Type: application/json
+
+{
+    "tecnologia": "5",
+    "contexto": "5",
+    "exemplo": "5"
+}
+
+### 
+#------------------------------------
+
+# 01 --> MOSTRAR TODOS DADOS
+GET {{host}}/dado
+Content-Type: application/json
+
+### 
+#------------------------------------
+# MOSTRAR DADO POR ID
+GET {{host}}/dado/2
+Content-Type: application/json
+
+###
+#------------------------------------
+# REMOVER DADO
+
+DELETE {{host}}/dado/0
+
+###
+# -------------------------------------
+# ATUALIZAR DADO
+PUT {{host}}/dado/1
+Content-Type: application/json
+
+{
+    "tecnologia": "1",
+    "contexto": "Contexto Editado 1-2"
+
+}
+
+### 
+#------------------------------------

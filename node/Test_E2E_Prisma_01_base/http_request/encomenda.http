@@ -1,0 +1,7 @@
+### 
+# -------------------------------------
+# LISTAR TODOS OS DADOS
+GET {{host}}/encomenda
+Content-Type: application/json
+
+
