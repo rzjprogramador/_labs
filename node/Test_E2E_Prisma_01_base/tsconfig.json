@@ -7,7 +7,6 @@
           "DOM"
       ],
       "outDir": "./dist",
-      "rootDir": "./src",
       "removeComments": true,
       "noEmitOnError": true,
       "strict": true,
@@ -29,7 +28,7 @@
   "typeRoots": [
       "node_modules/@types"
   ],
-  "include": [ // inclui no build js
-      "src/**/*.ts"],
+  "include": [ // INCLUI NO BUILD E NA LEITURA DE PASTA NA RAIZ DO PROJETO
+      "src/**/*.ts", "tests"],
   "exclude": [],
 }

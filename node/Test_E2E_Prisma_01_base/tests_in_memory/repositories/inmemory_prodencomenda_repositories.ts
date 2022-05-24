@@ -5,7 +5,7 @@ import { ProdEncomendaRepository, CreateProdEncomenda } from '../../src/modules/
 
 import { ProdEncomenda } from '../../src/modules/prodEncomenda/entity/ProdEncomenda.entity'
 
-export class PrismaProdEncomendaRepository implements ProdEncomendaRepository {
+export class InMemoryPrismaProdEncomendaRepository implements ProdEncomendaRepository {
 
   public items : ProdEncomenda[]  = []
 
