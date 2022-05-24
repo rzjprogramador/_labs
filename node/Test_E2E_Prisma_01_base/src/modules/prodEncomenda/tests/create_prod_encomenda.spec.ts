@@ -1,4 +1,4 @@
-import { CreateProdEncomenda } from '../services/create_prod_encomenda_service'
+import { CreateProdEncomenda } from '../repositories/implementations/create/create_prod_encomenda_service'
 import { InMemoryPrismaProdEncomendaRepository } from '../../../../tests_in_memory/repositories/inmemory_prodencomenda_repositories'
 
 describe('ProdEncomenda', () => {
@@ -19,7 +19,7 @@ describe('ProdEncomenda', () => {
 
     // VERIFICANDO SE CRIOU CORRETAMENTE DENTRO DO ARRAY INMEMORY O OBJETO DA ENTIDADE
 
-  await expect(inMemoryPrismaProdEncomendaRepository.items).toEqual(expect.arrayContaining([
+  expect(inMemoryPrismaProdEncomendaRepository.items).toEqual(expect.arrayContaining([
     expect.objectContaining({
       nome: 'prod_encomenda_01', preco: 15  
     }) 
