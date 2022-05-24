@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd -r tsconfig-paths/register --ignore-watch node_modules src/_server/server.ts",
+    "dev": "tsnd --ignore-watch node_modules -r tsconfig-paths/register src/_server/server.ts",
     "test": "jest",
     "test:e2e": "jest --config jest-e2e.config.ts"
   },
