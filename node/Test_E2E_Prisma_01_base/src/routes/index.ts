@@ -5,5 +5,4 @@ import { Router } from 'express'
 export const routes = Router()
 
 // EXPORT TODOS CENTRALIZADORES DE ROTAS
-
 routes.use(routerProdEncomenda)
