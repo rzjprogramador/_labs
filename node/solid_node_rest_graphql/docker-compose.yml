@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  #POSTGRES
+  solid_ts_compose:
+    image: postgres:12.4-alpine
+    container_name: ${PROJETO_BD}
+    environment:
+      POSTGRES_PASSWORD: ${SENHA_DB}
+    ports:
+      - "5440:5432"
+    volumes:
+      - "./dockerizando/${PROJETO_BD}:/var/lib/dockerizando-pc/${PROJETO_BD}"
+    networks:
+      - "${PROJETO_BD}"
+
+#REDE
+networks:
+  solid_ts:
+    driver: "bridge"

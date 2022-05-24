@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "lib": ["es2018", "esnext.asynciterable"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "rootDirs": ["src"],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"], 
+      "@soma/*": ["zz_tests/importacao_de_modulos/soma/*"] 
+    }
+  },
+
+  "typeRoots": ["node_modules/@types"],
+  "include": ["src", "tests"],
+  "exclude": []
+}

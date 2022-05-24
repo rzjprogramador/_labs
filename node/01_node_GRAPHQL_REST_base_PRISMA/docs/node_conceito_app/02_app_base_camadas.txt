@@ -1,0 +1,9 @@
+ 
+inicio:
+comeca definindo a rota // para chamar o controller
+
+controller: 
+
+fluxo:
+- vai clicando no metodo chamado e fazendo cada camada
+- na ultima faz o repo antes de terminar o service para usa no service os metodos do repo

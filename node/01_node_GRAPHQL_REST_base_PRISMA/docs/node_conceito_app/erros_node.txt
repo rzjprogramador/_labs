@@ -1,0 +1,5 @@
+erro_metodo_nao_precisa_de_execucao: {
+  erro: ` No overload matches this call. ts(2769)`,
+  traducao: `Nenhuma sobrecarga corresponde a esta chamada`,
+  solucao: `o metodo é auto execuatvel nao precisa de execucao de () parenteses.`,
+}

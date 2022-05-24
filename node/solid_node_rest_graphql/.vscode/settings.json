@@ -1,0 +1,15 @@
+{
+  /*  VARIAVEIS DE AMBIENTE PARA TEST HTTP */
+  "rest-client.environmentVariables": {
+     "Local Env": {
+         "host": "http://localhost:3333"
+     },
+ },
+
+ "editor.codeActionsOnSave": {
+     "source.fixAll.eslint": true
+ },
+ "typescript.updateImportsOnFileMove.enabled": "prompt",
+
+     
+}

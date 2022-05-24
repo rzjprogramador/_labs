@@ -1,0 +1,21 @@
+### 
+# -------------------------------------
+# CADASTRAR DADO
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+    "nome": "QuatroBy_REST_HTTP",
+    "email": "5@email.com",
+    "password": "444444",
+    "indexRef": 5
+    
+}
+
+### 
+# -------------------------------------
+# LISTAR TODOS OS DADOS
+GET {{host}}/api/users
+Content-Type: application/json
+
+

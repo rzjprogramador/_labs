@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "commonjs",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "removeComments": true,
+        "noEmitOnError": true,
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "strictPropertyInitialization": false,
+        "allowJs": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "baseUrl": "src",
+        "paths": {
+            "@/*": [
+                "*"
+            ]
+        },
+    },
+    "typeRoots": [
+        "node_modules/@types"
+    ],
+    "include": [ // inclui no build js
+        "src/**/*.ts"
+, "src/zzz/modulares/modulares--js/mod1-index/mod1.js", "src/zzz/modulares/modulares--js/soma/soma.js"    ],
+    "exclude": [],
+}
