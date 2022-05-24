@@ -10,7 +10,7 @@ routerProdEncomenda.post('/encomenda', async (req: Request, res: Response) => {
 
   try{
     await factoryControleProdEncomenda().execute({ nome, preco })
-    return res.status(200).send()
+    return res.status(201).send()
   }
   catch(error: any) {
     res.status(400).json({
