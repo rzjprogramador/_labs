@@ -20,9 +20,7 @@ describe('ProdEncomenda', () => {
     // VERIFICANDO SE CRIOU CORRETAMENTE DENTRO DO ARRAY INMEMORY O OBJETO DA ENTIDADE
 
   expect(inMemoryPrismaProdEncomendaRepository.items).toEqual(expect.arrayContaining([
-    expect.objectContaining({
-      nome: 'prod_encomenda_01', preco: 15  
-    }) 
+    expect.objectContaining({ nome: 'prod_encomenda_01', preco: 15 }) 
   ]))
 
   }) // 

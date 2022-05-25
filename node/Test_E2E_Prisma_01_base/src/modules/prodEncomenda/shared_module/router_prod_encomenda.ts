@@ -1,20 +1,19 @@
-import { Router, Request, Response} from 'express'
-// import { HttpRequest, HttpResponse } from '../../../generics_app/protocols/http_protocol'
+import { Router } from 'express'
 
 import { factoryControleProdEncomenda } from '../repositories/main_injecoes'
 
 export const routerProdEncomenda = Router()
 
-routerProdEncomenda.post('/encomenda', async (req: Request, res: Response) => {
+routerProdEncomenda.post('/encomenda', async (req, res) => {
   const { nome, preco } = req.body
 
-  try{
+  try {
     await factoryControleProdEncomenda().execute({ nome, preco })
     return res.status(201).send()
   }
-  catch(error: any) {
-    res.status(400).json({
-      error: error.message,
+  catch (err: any) {
+    return res.status(400).json({
+      error: err.message,
     })
   }
 

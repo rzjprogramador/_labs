@@ -6,5 +6,6 @@ export default {
   transform: {
     "^.+\\.(t|j)sx?$": ["@swc/jest"], // MUDANÇA ESTAVA NA DOC DO SWC - TRANSOFRMAR TS JSX EM SWC JEST
   },
+  
 
 };

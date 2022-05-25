@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsnd --ignore-watch node_modules -r tsconfig-paths/register src/_app/server.ts",
     "test": "jest",
-    "test:e2e": "jest --config jest-e2e.config.ts"
+    "test:e2e": "jest --detectOpenHandles --config jest-e2e.config.ts --forceExit"
   },
   "dependencies": {
     "@prisma/client": "^3.14.0",

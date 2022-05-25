@@ -18,7 +18,8 @@
       "allowJs": true,
       "moduleResolution": "node",
       "sourceMap": true,
-      "baseUrl": "src",
+      "rootDir": ".",
+      "baseUrl": "./src",
       "paths": {
           "@/*": [
               "*"

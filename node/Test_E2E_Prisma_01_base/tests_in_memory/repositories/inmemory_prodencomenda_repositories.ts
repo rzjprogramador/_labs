@@ -1,4 +1,4 @@
-// BANCO INMEMORY PRODENCOMENDA SOMENTE APRA AMBIENTE DE TESTS
+// BANCO INMEMORY PRODENCOMENDA SOMENTE PARA AMBIENTE DE TESTS
 // NAO SE COMUNICAR COM O PRISMA 
 import crypto from 'node:crypto'
 import { ProdEncomendaRepository, CreateProdEncomenda } from '../../src/modules/prodEncomenda/repositories/prod_encomenda_repository'
