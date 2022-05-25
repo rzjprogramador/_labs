@@ -1,4 +1,4 @@
-import { CreateProdEncomenda } from '../repositories/implementations/create/create_prod_encomenda_service'
+import { CreateProdEncomenda } from '../usecases/implementations/create_prod_encomenda_service'
 import { InMemoryPrismaProdEncomendaRepository } from '../../../../tests_in_memory/repositories/inmemory_prodencomenda_repositories'
 
 describe('ProdEncomenda', () => {

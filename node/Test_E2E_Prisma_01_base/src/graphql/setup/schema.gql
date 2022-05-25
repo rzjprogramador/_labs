@@ -1,0 +1,11 @@
+# # CONTRATOS DE TIPOS USADOS
+# scalar Date
+
+# type ProdEncomenda {
+#   idDB: String
+#   id: ID
+#   nome: String!
+#   preco: float!
+#   createdAt: Date
+# }
+

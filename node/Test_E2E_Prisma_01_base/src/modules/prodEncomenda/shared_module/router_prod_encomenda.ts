@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { factoryControleProdEncomenda } from '../repositories/main_injecoes'
+import { createProdEncomendaFactory } from '../usecases/main_injecoes/create_prod_encomenda'
 
 export const routerProdEncomenda = Router()
 
@@ -8,7 +8,7 @@ routerProdEncomenda.post('/encomenda', async (req, res) => {
   const { nome, preco } = req.body
 
   try {
-    await factoryControleProdEncomenda().execute({ nome, preco })
+    await createProdEncomendaFactory().execute({ nome, preco })
     return res.status(201).send()
   }
   catch (err: any) {

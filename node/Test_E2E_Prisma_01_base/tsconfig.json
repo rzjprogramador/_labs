@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
-      "target": "ES2019",
+      "target": "es2018",
       "module": "commonjs",
-      "lib": [
-          "ESNext",
-          "DOM"
-      ],
       "outDir": "./dist",
+      "typeRoots": ["node_modules/@types"],
+      "types": ["typed-graphql"],
       "removeComments": true,
       "noEmitOnError": true,
       "strict": true,
@@ -25,10 +23,10 @@
               "*"
           ]
       },
+      "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
   },
-  "typeRoots": [
-      "node_modules/@types"
-  ],
+  
   "include": [ // INCLUI NO BUILD E NA LEITURA DE PASTA NA RAIZ DO PROJETO
       "src/**/*.ts", "tests"],
   "exclude": [],
