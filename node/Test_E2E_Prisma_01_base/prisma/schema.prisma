@@ -10,6 +10,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Hello {
+  idDB  String  @id @default(uuid())
+  id    String?
+  nome  String
+  preco Float
+
+  @@map("hellos")
+}
+
 model ProdEncomenda {
   idDB  String @id @default(uuid())
   nome  String
