@@ -4,18 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app/server.ts",
+    "dev:rest": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app/server/express_server/server.ts",
     "test": "jest",
     "test:e2e": "jest --detectOpenHandles --config jest-e2e.config.ts --forceExit"
   },
   "dependencies": {
     "@prisma/client": "^3.14.0",
+    "apollo-server": "^3.8.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-async-errors": "^3.1.1",
-    "express-graphql": "^0.12.0",
     "graphql": "^16.5.0",
-    "graphql-tools": "^7.0.5",
     "module-alias": "^2.2.2",
     "reflect-metadata": "^0.1.13"
   },

@@ -7,5 +7,5 @@ export const produtoResolvers = {
   Query: {
     getAllProdEncomendas,
   },
-  // Mutation: {}
+  Mutation: {}
 }

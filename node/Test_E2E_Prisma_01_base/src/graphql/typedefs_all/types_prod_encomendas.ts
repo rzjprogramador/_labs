@@ -4,6 +4,13 @@ export const prodEncomendasTypeDefs = gql`
   
   # CONTRATOS DE TIPOS USADOS
 scalar Date
+type Mutation {
+  _empty: String
+}
+
+type Subscription {
+  _empty: String
+}
 
 type ProdEncomenda {
   idDB: String
@@ -14,7 +21,7 @@ type ProdEncomenda {
 }
 
 type Query {
-    getAllProdEncomendas(): [ProdEncomenda]!
+    getAllProdEncomendas: [ProdEncomenda]!
   }
 
 `
