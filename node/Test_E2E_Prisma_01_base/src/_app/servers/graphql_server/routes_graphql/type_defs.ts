@@ -1,7 +1,3 @@
-import { gql } from 'apollo-server'
+import { prodEncomendaTypes } from '../../../../modules/prodEncomenda/shared_module/graphql_shared/type_defs/prod_encomenda_typedefs'
 
-export const typeDefs = gql`
-type Query {
-  hello: String
-  funcaoDois: String
-}`
+export const typeDefs = [prodEncomendaTypes, ]
