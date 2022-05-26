@@ -1,4 +1,4 @@
-import { routerProdEncomenda } from '../../../../modules/prodEncomenda/shared_module/router_prod_encomenda'
+import { routerProdEncomenda } from '../../../../modules/prodEncomenda/shared_module/express_shared_routes/router_prod_encomenda'
 import { Router } from 'express'
 // import { rota_desacoplada_express } from '../../modules/prodEncomenda/shared_module/rota_desacoplada_express'
 
