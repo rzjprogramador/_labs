@@ -5,7 +5,7 @@ import { graphqlHTTP } from 'express-graphql'
 import schema from '../../graphql_central/schema'
 
 import { app } from './app'
-import { routes } from '../../routes'
+import { routes } from './routes_express'
 
 app.use(express.json())
 app.use(routes)
