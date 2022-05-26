@@ -2,7 +2,7 @@
 
 export const prodEncomendaResolvers = {
   Query: {
-    hello: () => `Hello Word 4`,
-    funcaoDois: () => `Ola funcao Dois 4`
+    hello: () => `Hello Word 5`,
+    funcaoDois: () => `Ola funcao Dois 5`
   }
 }
