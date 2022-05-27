@@ -1,12 +1,7 @@
 import { gql } from 'apollo-server'
 
 export const olaTypeDefs = gql`
-# TIPO CUSTOMIZADO
-  type Hello {
-    id: ID
-    nome: String
-    preco: Float
-  }
+# OBS: OS TIPOS CUSTOMIZADOS ESTAO NA PASTA DE ENTITIES TYPEDEFS
 
   # TODAS CONSULTAS QUE POSSO FAZER
   type Query {
