@@ -5,7 +5,7 @@ export class ListHello {
     private readonly listHelloRepository: HelloRepository
   ) {}
 
-  execute() {
+  handle() {
     this.listHelloRepository.list()
   }
 }

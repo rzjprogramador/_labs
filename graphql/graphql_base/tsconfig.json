@@ -4,7 +4,6 @@
       "module": "commonjs",
       "outDir": "./dist",
       "typeRoots": ["node_modules/@types"],
-    //   "types": ["typed-graphql"],
       "removeComments": true,
       "noEmitOnError": true,
       "strict": true,

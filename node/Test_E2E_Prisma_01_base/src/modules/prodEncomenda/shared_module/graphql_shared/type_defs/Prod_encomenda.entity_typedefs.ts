@@ -1,7 +1,7 @@
 import { gql } from 'apollo-server'
 
 export const prodEncomendaTypes = gql`
-# type Hello {
+# type HelloTest {
 #   mensagem: String
 # }
 

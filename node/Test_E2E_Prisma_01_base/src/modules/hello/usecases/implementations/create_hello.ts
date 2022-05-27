@@ -1,11 +1,9 @@
 import { HelloRepository } from '../../contracts/repositories_contracts/hello_use_case_repository';
+import { CreateHelloRequest } from '../../contracts/repositories_contracts/create_hello_request'
 
 // SERVICO
 
-export interface CreateHelloRequest {
-  nome: string
-  preco: number
-}
+
 
 export class CreateHello {
 
@@ -13,7 +11,7 @@ export class CreateHello {
     private readonly helloRepository: HelloRepository
   ) {}
 
-  execute({ nome, preco }: CreateHelloRequest) {
+  handle({ nome, preco }: CreateHelloRequest) {
     // REGRAS DE NEGOCIO ANTES DE CONCLUIR A ACAO FINAL DO OBJETIVO:
 
     

@@ -4,13 +4,9 @@ export const prodEncomendaUseCaseTypes = gql`
 
 # CONSULTAS DISPONIVEIS DESTA ENTIDADE
 type Query {
-  hello: String
+  helloTest: String
   funcaoDois: String
 }
 
-# TIPOS CUSTOMIZADOS
-# type Hello {
-#   mensagem: String
-# }
 
 `//

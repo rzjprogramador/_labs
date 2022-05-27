@@ -1,6 +1,6 @@
-import { CreateHello, HelloRepository } from '../../contracts/repositories_contracts/hello_use_case_repository';
-import { Hello } from '../../entity/Hello.entity'
 import { prisma } from '../../../../database/prisma'
+import { CreateHello, HelloRepository } from '../../contracts/repositories_contracts/hello_use_case_repository'
+// import { Hello } from '../../entity/Hello.entity'
 
 
 export class HelloRepositoryPrisma implements HelloRepository {
@@ -9,9 +9,8 @@ export class HelloRepositoryPrisma implements HelloRepository {
    await  prisma.hello.create({ data })
   }
 
-  async list (): Promise<Hello[]> {
-    // const all = await prisma.hello.findMany()
-    // return all
+  async list (): Promise<void> {
+    await prisma.hello.findMany()
   }
   
 }

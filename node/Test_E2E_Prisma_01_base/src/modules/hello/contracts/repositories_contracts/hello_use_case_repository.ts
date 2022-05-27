@@ -1,4 +1,4 @@
-import { Hello } from '../../entity/Hello.entity'
+// import { Hello } from '../../entity/Hello.entity'
 
 export interface CreateHello {
   nome: string
@@ -7,5 +7,5 @@ export interface CreateHello {
 
 export interface HelloRepository {
   create(data: CreateHello): Promise<void>
-  list(): Promise<Hello[]>
+  list(): Promise<void>
 }
