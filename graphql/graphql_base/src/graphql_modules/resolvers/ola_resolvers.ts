@@ -2,6 +2,6 @@
 
 export const olaResolvers = {
   Query: {
-    ola: () => `Ola...`
+    ola: () => `Ola... 1 ...`
   }
 }

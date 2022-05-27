@@ -2,5 +2,8 @@ import { olaResolvers } from '../../../../graphql_modules/resolvers/ola_resolver
 
 
 // CENTRALIZANDO RESOLVERS
-export const resolvers = [olaResolvers, ]
+
+export const resolvers = [
+  olaResolvers, 
+]
 
