@@ -9,3 +9,8 @@ const server = new ApolloServer({
 })
 
 server.listen(7777).then(({ url }) => console.log(`SERVER_ON :: ${url}`))
+
+
+/**
+ * SERVER GRAPHQL >> APOLLO_SERVER
+*/

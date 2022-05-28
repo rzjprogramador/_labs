@@ -1,7 +1,10 @@
-// REGISTRA NO SUB ROTEADOR TODOS SUB OBJETOS ENTIDADE
-// import { dadoObjUm } from './dado_obj_um'
+import { userTest } from './userTest'
 
 
 export const objTypesSubEntities = [
-  // dadoObjUm,
+  userTest, 
 ]
+
+/**
+ * REGISTRA NO SUB ROTEADOR TODOS SUB OBJETOS ENTIDADE
+*/
