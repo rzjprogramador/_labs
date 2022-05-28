@@ -8,6 +8,7 @@ export const hardCode = gql`
       logico: Boolean
       numeroInteiro: Int
       userTest: UserTest
+      allUserTest: [UserTest]!
 
   }
 

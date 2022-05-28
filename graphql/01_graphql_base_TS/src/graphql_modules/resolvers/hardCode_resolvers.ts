@@ -1,3 +1,4 @@
+import { USER_TEST_HARD_UM, USER_TEST_HARD_DOIS  } from '../../utils/helpers_obj/hardcode/objects'
 
 export const hardCodeResolvers = {
 
@@ -11,12 +12,13 @@ export const hardCodeResolvers = {
     numeroInteiro: () => 10,
 
     userTest: () => {
-      return {
-        id: 'UserTest',
-        username: 'UserName',
-        nome: 'Nome',
-        sobrenome: 'Sobrenome'
-      }
+      return USER_TEST_HARD_UM 
+    },
+
+    allUserTest: () => {
+      return [
+        USER_TEST_HARD_UM, USER_TEST_HARD_DOIS
+      ]
     }
 
   },
