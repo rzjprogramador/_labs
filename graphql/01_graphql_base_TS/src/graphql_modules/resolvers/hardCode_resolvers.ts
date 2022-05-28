@@ -1,4 +1,4 @@
-
+// RESOLVENDO AS DEFINICOES DE TIPOS
 
 export const hardCodeResolvers = {
 
