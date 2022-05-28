@@ -1,7 +1,7 @@
-import { hello } from './Hello';
-
 // REGISTRA NO SUB ROTEADOR TODOS OBJETOS ENTIDADE 
+import { hardCode } from './HardCode'
+
 
 export const objTypesEntities = [
-  hello,
+  hardCode,
 ]

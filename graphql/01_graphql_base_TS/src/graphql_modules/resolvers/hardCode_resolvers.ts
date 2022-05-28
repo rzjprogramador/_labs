@@ -4,7 +4,7 @@ export const hardCodeResolvers = {
 
   Query: {
     texto: () => {
-      return `Texto da rota resolver texto`
+      return `Texto -->  1  <----`
     }
   },
   // Mutation: {}
