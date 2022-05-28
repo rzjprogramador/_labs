@@ -3,12 +3,10 @@ import { gql } from 'apollo-server'
 
 export const hardCode = gql`
 
+  type Query { 
+    # CONSULTAS QUE A ENTIDADE PODE FAZER
+      texto: String
 
-
-type Query { 
-  # CONSULTAS QUE A ENTIDADE PODE FAZER
-    texto: String
-    
   }
 
 
