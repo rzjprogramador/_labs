@@ -4,9 +4,9 @@
 
 export const USER_TEST_HARD_UM = {
   id: '1',
-  username: 'any_username',
-  nome: 'any_nome',
-  sobrenome: 'any_sobrenome'
+  username: 'any_username1',
+  nome: 'any_nome1',
+  sobrenome: 'any_sobrenome1'
 }
 
 export const USER_TEST_HARD_DOIS = {

@@ -7,9 +7,9 @@ const logico = () => true
 
 const numeroInteiro = () => 10
 
-const userTest = () => USER_TEST_HARD_UM 
+const getUserTest = () => USER_TEST_HARD_UM 
 
-const allUserTest = () => {
+const getAllUserTest = () => {
   return [
     USER_TEST_HARD_UM, USER_TEST_HARD_DOIS
   ]
@@ -22,8 +22,8 @@ export const hardCodeResolvers = {
     texto,
     logico,
     numeroInteiro,
-    userTest,
-    allUserTest,
+    getUserTest,
+    getAllUserTest,
 
   },
   // Mutation: {}
