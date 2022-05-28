@@ -10,8 +10,8 @@ export const olaTypeDefs = gql`
   }
 
   # FUNCOES QUE POSSO FAZER
-  # type Mutation {
-  #   # createHello(hello: Hello): Hello
-  # }
+  type Mutation {
+    createHello(hello: Hello): Hello
+  }
 `
 //
