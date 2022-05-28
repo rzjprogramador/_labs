@@ -1,0 +1,7 @@
+# Registros
+## Definicoes de tipos:
+- cada objeto entidade registrar no seu index
+- cada subObjeto entidade registrar no seu index
+- terá um index no _sub_routes que centralizará todos os index registrados de entidades e subEntidades e entregará para o typeDefs Principal da rota principal unindo todos typeDefs.
+
+---

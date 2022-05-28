@@ -1,11 +1,12 @@
 import { gql } from 'apollo-server'
 
-export const helloEntityTypeDefs = gql`
-# TIPO CUSTOMIZADO
+export const hello = gql`
+
 type Hello {
     id: ID
     nome: String
     preco: Float
+    dadoObjUm: DadoObjUm
   }
-`
-//
+
+`//

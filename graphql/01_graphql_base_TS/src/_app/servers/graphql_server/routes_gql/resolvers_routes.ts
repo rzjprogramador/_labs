@@ -1,9 +1,7 @@
-import { olaResolvers } from '../../../../graphql_modules/resolvers/ola_resolvers'
+import { resolversSubRoutes } from '../../../../graphql_modules/resolvers/_sub_routes_resolvers'
 
 
-// CENTRALIZANDO RESOLVERS
+// CENTRALIZANDO RESOLVERS - SERÁ ALIMENTADO PELO SUB_RESOLVERS
 
-export const resolvers = [
-  olaResolvers, 
-]
+export const resolvers = resolversSubRoutes
 
