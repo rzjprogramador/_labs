@@ -1,25 +1,29 @@
 import { USER_TEST_HARD_UM, USER_TEST_HARD_DOIS  } from '../../utils/helpers_obj/hardcode/objects'
 
+// IMPLEMENTACOES DAS REFERENCIAS DE RESOLVERS
+const texto = () => `Texto -->  1  <----`
+
+const logico = () => true
+
+const numeroInteiro = () => 10
+
+const userTest = () => USER_TEST_HARD_UM 
+
+const allUserTest = () => {
+  return [
+    USER_TEST_HARD_UM, USER_TEST_HARD_DOIS
+  ]
+}
+
+// REFERENCIAS
 export const hardCodeResolvers = {
 
   Query: {
-    texto: () => {
-      return `Texto -->  1  <----`
-    },
-
-    logico: () => true,
-
-    numeroInteiro: () => 10,
-
-    userTest: () => {
-      return USER_TEST_HARD_UM 
-    },
-
-    allUserTest: () => {
-      return [
-        USER_TEST_HARD_UM, USER_TEST_HARD_DOIS
-      ]
-    }
+    texto,
+    logico,
+    numeroInteiro,
+    userTest,
+    allUserTest,
 
   },
   // Mutation: {}
