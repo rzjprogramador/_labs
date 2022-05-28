@@ -1,4 +1,5 @@
-import { helloResolvers } from '../hello_resolvers'
+import { hardCodeResolvers } from '../hardCode_resolvers'
+// import { helloResolvers } from '../hello_resolvers'
 
 
 // SUN ROTEADOR DE TIPE DEFS ->> ALIMENTA O RESOLVERS ROTEADOR PRINCIPAL
@@ -7,6 +8,7 @@ import { helloResolvers } from '../hello_resolvers'
 
 export const resolversSubRoutes = [
   // REGISTRO DE RESOLVERS
-  helloResolvers,
+  // helloResolvers,
+  hardCodeResolvers
   
 ]
