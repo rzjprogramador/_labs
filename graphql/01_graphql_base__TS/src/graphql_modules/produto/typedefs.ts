@@ -8,12 +8,13 @@ export const produto = gql`
   }
 
   type Query {
-    getProduto: Produto
+    getProduto(id: ID): Produto
     allProduto: [Produto]
   }
 `
 
 /*
 * DEFINICOES DE PROPRIEDADES DE ENTIDADE && HABILITANDO SEUS COMPORTAMENTOS
-* REGISTRAR NO TYPEDEFS CENTRALIZERS
+* REGISTRAR NO TYPEDEFS CENTRALIZERS QUE É O SCHEMA
+* RESOLVER AS QUERYS
 */
