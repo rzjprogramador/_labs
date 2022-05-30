@@ -1,16 +1,6 @@
-import { hardCode } from '../HardCode/typedefs_HardCode'
-import { userTest } from '../UserTest/UserTest'
+import { hello } from '../hello/typedefs'
 
 
 export const typeDefs = [
-  
-  hardCode,
-  userTest 
-
+  hello,  
 ]
-
-/*
-ROTEADOR DE TIPE DEFS ->> ALIMENTA O TIPEDEFS ROTEADOR PRINCIPAL
-
-  * REGISTRO DE OBJ TYPEDEFS && SUB OBJTYPEDEFS
-*/

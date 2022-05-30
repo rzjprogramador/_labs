@@ -1,12 +1,8 @@
-import { hardCodeResolvers } from '../HardCode/resolvers_hardcode'
+import { helloResolvers } from '../hello/resolvers'
 
+// REGISTRO DE RESOLVERS
 
 export const resolvers = [
-  // REGISTRO DE RESOLVERS
-  hardCodeResolvers
+  helloResolvers
   
 ]
-
-/**
- * ROTEADOR DE TIPEDEFS ->> ALIMENTA O RESOLVERS ROTEADOR PRINCIPAL
-*/
