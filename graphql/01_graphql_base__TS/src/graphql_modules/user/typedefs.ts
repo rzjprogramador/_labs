@@ -9,7 +9,7 @@ export const user = gql`
   }
 
   type Query {
-    getUser(id: Int): User
+    getUser(id: ID, email: String): User
     allUsers: [User]
   }
 
