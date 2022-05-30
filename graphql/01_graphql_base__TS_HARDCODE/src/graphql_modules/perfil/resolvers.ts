@@ -1,4 +1,4 @@
-import { collection_Perfil_HARD } from '../../use/hardcoders/repositorios_hardcode/perfis_hardcode'
+import { collection_Perfil_HARD } from '../generics_graphql/hardcoders/repositorios_hardcode/perfis_hardcode'
 
 /*
 * METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 

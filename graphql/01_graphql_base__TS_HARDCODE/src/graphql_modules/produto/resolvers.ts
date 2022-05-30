@@ -1,4 +1,4 @@
-import { collection_Produtos_HARD } from '../../use/hardcoders/repositorios_hardcode/produtos_hardcode'
+import { collection_Produtos_HARD } from '../generics_graphql/hardcoders/repositorios_hardcode/produtos_hardcode'
 
 /*
 * METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
