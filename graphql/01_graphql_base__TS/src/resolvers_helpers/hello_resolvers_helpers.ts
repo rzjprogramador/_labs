@@ -7,3 +7,5 @@ export const hello = () => {
     logico: true
   }
 }
+
+// REGISTRAR NO OBJETO RESOLVERS DA ENTIDADE

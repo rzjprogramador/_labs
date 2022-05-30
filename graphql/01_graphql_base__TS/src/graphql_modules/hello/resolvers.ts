@@ -1,4 +1,4 @@
-import { hello } from '../utils_gql/generics_gql/helpers_resolvers/hello_resolvers_helpers'
+import { hello } from '../../resolvers_helpers/hello_resolvers_helpers'
 
 
 export const helloResolvers = {
@@ -10,3 +10,6 @@ export const helloResolvers = {
   // Mutation: {}
   
 }
+
+
+// REGISTRAR NO RESOLVERS CENTRALIZERS
