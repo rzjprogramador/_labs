@@ -1,4 +1,4 @@
-import { hello } from '../generics/helpers_resolvers/hello_resolvers_helpers'
+import { hello } from '../utils_gql/generics_gql/helpers_resolvers/hello_resolvers_helpers'
 
 
 export const helloResolvers = {
