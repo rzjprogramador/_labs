@@ -1,0 +1,19 @@
+// CONSULTA POR USUARIO PELA VARIAVEL ID
+
+query USER($id: ID) {
+  getUser(id: $id) {
+    id
+    nome
+    email
+    password
+    perfil {
+      cargo
+    }
+  }
+  
+}
+
+// QUERY VARIABLES :
+{
+  "id": "1"
+}

@@ -16,7 +16,7 @@
       "moduleResolution": "node",
       "sourceMap": true,
       "rootDir": ".",
-      "baseUrl": "./src",
+      "baseUrl": "graphql",
       "paths": {
           "@/*": [
               "*"
@@ -27,6 +27,6 @@
   },
   
   "include": [ // INCLUI NO BUILD E NA LEITURA DE PASTA NA RAIZ DO PROJETO
-      "src/**/*.ts", "tests"],
+      "graphql/**/*.ts", "tests"],
   "exclude": [],
 }
