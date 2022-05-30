@@ -1,8 +1,8 @@
 import { ApolloServer } from 'apollo-server'
 
-import { typeDefs } from '../../../_centralizers/typedefs'
-import { resolvers } from '../../../_centralizers/resolvers'
-import { context } from '../../../_centralizers/context'
+import { typeDefs } from '../../../centralizers/typedefs'
+import { resolvers } from '../../../centralizers/resolvers'
+import { context } from '../../../centralizers/context'
 
 
 const server = new ApolloServer({
