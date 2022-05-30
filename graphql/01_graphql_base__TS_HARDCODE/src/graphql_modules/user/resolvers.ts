@@ -1,4 +1,5 @@
-import { collection_Users_HARD } from './use/hardcoders/usuarios_hardcode'
+import { collection_Users_HARD } from '../../use/hardcoders/repositorios_hardcode/usuarios_hardcode'
+import { collection_Perfil_HARD } from '../../use/hardcoders/repositorios_hardcode/perfis_hardcode'
 
 /*
 * METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
@@ -26,6 +27,12 @@ export const userResolvers = {
     getUser,
 
   },
+
+  User: {
+    perfil: (user: any) => {
+      return collection_Perfil_HARD.find(p => p.id === user.perfil)
+    }
+  }
 
   // Mutation: {}
   

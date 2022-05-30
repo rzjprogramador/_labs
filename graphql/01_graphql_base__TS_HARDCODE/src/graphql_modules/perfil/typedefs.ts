@@ -1,18 +1,14 @@
 import { gql } from 'apollo-server'
 
-export const user = gql`
-  type User {
+export const perfil = gql`
+  type Perfil {
     id: ID
-    nome: String
-    email: String
-    password: String
-    perfil: Perfil
+    cargo: String
   }
 
   type Query {
-    getUser(id: ID, email: String): User
-    allUsers: [User]
-    # perfis: [Perfil]
+    collectionPerfil: [Perfil]
+    
   }
 
 `
