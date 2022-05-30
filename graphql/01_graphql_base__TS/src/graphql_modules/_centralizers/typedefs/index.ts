@@ -1,5 +1,5 @@
 import { objTypesEntities } from '../entities'
-import { objTypesSubEntities } from '../sub_entities'
+import { objTypesSubEntities } from '../entities/sub_entities'
 
 
 export const typeDefsSubRoutes = [

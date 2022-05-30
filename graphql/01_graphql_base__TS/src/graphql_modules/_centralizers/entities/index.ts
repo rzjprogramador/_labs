@@ -1,4 +1,4 @@
-import { hardCode } from './HardCode'
+import { hardCode } from '../../HardCode/typedefs/HardCode'
 
 
 export const objTypesEntities = [

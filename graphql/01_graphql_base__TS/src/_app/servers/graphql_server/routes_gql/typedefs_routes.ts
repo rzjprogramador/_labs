@@ -1,4 +1,4 @@
-import { typeDefsSubRoutes } from '../../../../graphql_modules/typedefs/_sub_routes_typedefs'
+import { typeDefsSubRoutes } from '../../../../graphql_modules/_centralizers/typedefs'
 
 
 export const typeDefs = typeDefsSubRoutes

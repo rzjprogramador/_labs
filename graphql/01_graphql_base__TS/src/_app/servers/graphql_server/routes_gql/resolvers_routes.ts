@@ -1,4 +1,4 @@
-import { resolversSubRoutes } from '../../../../graphql_modules/resolvers/_sub_routes_resolvers'
+import { resolversSubRoutes } from '../../../../graphql_modules/_centralizers/resolvers'
 
 
 export const resolvers = resolversSubRoutes

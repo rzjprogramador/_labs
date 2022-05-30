@@ -1,4 +1,4 @@
-import { hardCodeResolvers } from '../hardCode_resolvers'
+import { hardCodeResolvers } from '../../HardCode/resolvers/hardCode_resolvers'
 
 
 export const resolversSubRoutes = [

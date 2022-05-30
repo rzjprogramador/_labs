@@ -2,6 +2,7 @@
  * AUXILIARES: OBJETOS HARDCODE 
  */
 
+
 export const USER_TEST_HARD_UM = {
   id: '1',
   username: 'any_username1',
@@ -15,3 +16,6 @@ export const USER_TEST_HARD_DOIS = {
   nome: 'any_nome2',
   sobrenome: 'any_sobrenome2'
 }
+
+
+export const collectionUSERTEST = [ USER_TEST_HARD_UM, USER_TEST_HARD_DOIS]
