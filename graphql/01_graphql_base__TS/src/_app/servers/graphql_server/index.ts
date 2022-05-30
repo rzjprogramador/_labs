@@ -1,8 +1,8 @@
 import { ApolloServer } from 'apollo-server'
 
-import { typeDefs } from '../../../graphql_modules/_centralizers/typedefs'
-import { resolvers } from '../../../graphql_modules/_centralizers/resolvers'
-import { context } from '../../../graphql_modules/_centralizers/context'
+import { typeDefs } from '../../../_centralizers/typedefs'
+import { resolvers } from '../../../_centralizers/resolvers'
+import { context } from '../../../_centralizers/context'
 
 
 const server = new ApolloServer({

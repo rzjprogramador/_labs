@@ -1,4 +1,4 @@
-import { helloResolvers } from '../hello/resolvers'
+import { helloResolvers } from '../graphql_modules/hello/resolvers'
 
 // REGISTRO DE RESOLVERS
 
