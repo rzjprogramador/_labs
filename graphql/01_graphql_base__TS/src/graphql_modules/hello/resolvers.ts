@@ -1,5 +1,18 @@
-import { hello } from '../../implementations_resolvers/hello_resolvers_helpers'
+// FUNCOES QUE ALIMENTA OS RESOLVERS DA ENTIDADE
 
+
+const hello = () => {
+  return {
+    texto: 'Hello Texto',
+    logico: true
+  }
+}
+
+
+/*
+* APONTAMENTO DE RESOLVERS
+* REGISTRAR NO RESOLVERS CENTRALIZERS
+*/
 
 export const helloResolvers = {
   Query: {
@@ -10,9 +23,3 @@ export const helloResolvers = {
   // Mutation: {}
   
 }
-
-
-/*
-* SÓ APONTAMENTO DE RESOLVERS
-* REGISTRAR NO RESOLVERS CENTRALIZERS
-*/
