@@ -1,5 +1,8 @@
 import { collection_Produtos_HARD } from '../../utils_gql/hardcoders/objetos_helpers/produtos_hardcode'
 
+/*
+* METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
+*/
 
 const getProduto = (_: any, args: any) => {
   const { id, } = args

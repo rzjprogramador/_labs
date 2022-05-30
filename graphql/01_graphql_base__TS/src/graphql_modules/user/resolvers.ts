@@ -1,5 +1,8 @@
 import { collection_Users_HARD } from '../../utils_gql/hardcoders/objetos_helpers/usuarios_hardcode'
 
+/*
+* METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
+*/
 
 const getUser = (_: any, args: any) => {
   const { id, email } = args
