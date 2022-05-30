@@ -1,8 +1,9 @@
 import { ApolloServer } from 'apollo-server'
 
-import { typeDefs } from './routes_gql/typedefs_routes'
-import { resolvers } from './routes_gql/resolvers_routes'
-import { context } from './routes_gql/context'
+import { typeDefs } from '../../../graphql_modules/_centralizers/typedefs'
+import { resolvers } from '../../../graphql_modules/_centralizers/resolvers'
+import { context } from '../../../graphql_modules/_centralizers/context'
+
 
 const server = new ApolloServer({
   typeDefs,

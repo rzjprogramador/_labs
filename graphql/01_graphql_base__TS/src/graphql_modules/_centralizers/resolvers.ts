@@ -1,7 +1,7 @@
-import { hardCodeResolvers } from '../../HardCode/resolvers/hardCode_resolvers'
+import { hardCodeResolvers } from '../HardCode/resolvers/hardCode_resolvers'
 
 
-export const resolversSubRoutes = [
+export const resolvers = [
   // REGISTRO DE RESOLVERS
   hardCodeResolvers
   
