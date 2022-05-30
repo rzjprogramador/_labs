@@ -1,4 +1,4 @@
-import { hardCode } from '../HardCode/typedefs/HardCode'
+import { hardCode } from '../HardCode/typedefs_HardCode'
 import { userTest } from '../UserTest/UserTest'
 
 

@@ -1,4 +1,4 @@
-import { USER_TEST_HARD_UM, USER_TEST_HARD_DOIS, collectionUSERTEST  } from '../../../utils/helpers_obj/objects'
+import { USER_TEST_HARD_UM, USER_TEST_HARD_DOIS, collectionUSERTEST  } from './helpers/objects_hardcode'
 
 // IMPLEMENTACOES DAS REFERENCIAS DE RESOLVERS
 const texto = () => `Texto -->  1  <----`

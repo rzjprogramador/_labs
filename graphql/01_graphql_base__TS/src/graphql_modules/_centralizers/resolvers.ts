@@ -1,4 +1,4 @@
-import { hardCodeResolvers } from '../HardCode/resolvers/hardCode_resolvers'
+import { hardCodeResolvers } from '../HardCode/resolvers_hardcode'
 
 
 export const resolvers = [

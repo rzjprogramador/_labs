@@ -1,4 +1,4 @@
-import { hardCodeContext } from '../HardCode/context/hardCode_context'
+import { hardCodeContext } from '../HardCode/context_hardcode'
 
 
 export const context = [
