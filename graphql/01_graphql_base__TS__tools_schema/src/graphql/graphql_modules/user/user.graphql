@@ -13,3 +13,7 @@ type Query {
   allUsers: [User]
   # perfis: [Perfil]
 }
+
+type Mutation {
+  createUser(nome: String, email: String, password: String): User!
+}
