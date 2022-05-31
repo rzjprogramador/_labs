@@ -1,0 +1,15 @@
+# import Perfil from '../perfil/perfil.graphql'
+
+type User {
+  id: ID
+  nome: String
+  email: String
+  password: String
+  perfil: Perfil
+}
+
+type Query {
+  getUser(id: ID, email: String): User
+  allUsers: [User]
+  # perfis: [Perfil]
+}
