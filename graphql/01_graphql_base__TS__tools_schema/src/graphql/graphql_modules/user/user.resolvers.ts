@@ -24,7 +24,7 @@ const allUsers = () => collection_Users_HARD
 
 //
 
-const createUser = (_, args: any) => {
+const createUser = (_: any, args: any) => {
 
   // VERIFICAR SE EXIST
   const { email  } = args
