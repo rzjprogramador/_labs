@@ -17,7 +17,7 @@ const getProduto = (_: any, args: any) => {
 * CENTRALIZAR MODULO NO CENTRALIZERS/RESOLVERS
 */
 
-export const produtoResolvers = {
+export default {
   Query: {
     getProduto,
 

@@ -2,11 +2,13 @@ import { loadSchemaSync } from '@graphql-tools/load'
 import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader'
 
 
-export const typeDefs = loadSchemaSync("./**/*.graphql", {
+const typeDefs = loadSchemaSync("./**/*.gql", {
   loaders: [new GraphQLFileLoader()]
 })
 
-// console.log(printSchema(typeDefs))
+// console.log(typeDefs)
+
+export default typeDefs
 
 
 

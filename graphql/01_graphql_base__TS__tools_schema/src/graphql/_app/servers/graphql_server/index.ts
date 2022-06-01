@@ -1,8 +1,8 @@
 import { ApolloServer } from 'apollo-server'
 import { makeExecutableSchema } from '@graphql-tools/schema'
 
-import { typeDefs } from '../../../centralizers/typedefs'
-import { resolvers } from '../../../centralizers/resolvers'
+import typeDefs  from '../../../centralizers/typedefs'
+import resolvers  from '../../../centralizers/resolvers'
 import { context } from '../../../centralizers/context'
 import { formatErrorControll } from '../../../centralizers/formatError'
 

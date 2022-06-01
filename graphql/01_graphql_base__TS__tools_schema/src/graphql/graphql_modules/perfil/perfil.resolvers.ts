@@ -15,7 +15,7 @@ const collectionPerfil = () => {
 * CENTRALIZAR MODULO NO CENTRALIZERS/RESOLVERS
 */
 
-export const perfilResolvers = {
+export default {
   Query: {
     collectionPerfil,
 

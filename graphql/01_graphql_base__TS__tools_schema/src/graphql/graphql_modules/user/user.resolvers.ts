@@ -26,7 +26,7 @@ const getUser = (_: any, args: any) => {
 * CENTRALIZAR MODULO NO CENTRALIZERS/RESOLVERS
 */
 
-export const userResolvers = {
+export default {
   Query: {
     getUser,
     allUsers: () => {

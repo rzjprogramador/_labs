@@ -3,7 +3,6 @@
 * METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
 */
 
-import { mergeResolvers } from '@graphql-tools/merge'
 
 const hello = () => {
   return {
@@ -17,7 +16,7 @@ const hello = () => {
 * APONTAMENTO DE RESOLVERS
 */
 
-export const helloResolvers = {
+export default {
   Query: {
     hello,
 
@@ -26,6 +25,3 @@ export const helloResolvers = {
   // Mutation: {}
   
 }
-
-// EXPORTAR RESOLVER PARA MERGE_RESOLVERS
-// export const resolvers = mergeResolvers([ helloResolvers, ])

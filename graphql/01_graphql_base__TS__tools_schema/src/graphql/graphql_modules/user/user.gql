@@ -1,4 +1,4 @@
-# import Perfil from '../perfil/perfil.graphql'
+# import Perfil from '../perfil/perfil.gql'
 
 type User {
   id: ID
