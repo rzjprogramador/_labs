@@ -18,6 +18,34 @@ const getUser = (_: any, args: any) => {
   }
 }
 
+//
+
+const allUsers = () => collection_Users_HARD
+
+//
+
+const createUser = (_, args: any) => {
+
+  // VERIFICAR SE EXIST
+  const { email  } = args
+  const exist = collection_Users_HARD.some(u => u.email === email)
+  if(exist) throw new Error(`${MSG.ERR_EXCEPTION} ${MSG.NOT_REGISTRATION} ${email}`)
+
+
+  const user = { 
+    ...args, id: makeID(), perfil: '2' 
+  }
+
+  collection_Users_HARD.push(user)
+
+  return user
+}
+//
+
+const perfil = (user: any) => {
+  return collection_Perfil_HARD.find(p => p.id === user.perfil)
+}
+//
 
 /*
 * EXPORT REFERENCIAS RESOLVERS
@@ -26,37 +54,16 @@ const getUser = (_: any, args: any) => {
 export default {
   Query: {
     getUser,
-    allUsers: () => {
-      return collection_Users_HARD
-    }
-
+    allUsers,
   },
   
   // RESOLVER TRIVIAL : CAMPO QUE A QUERY NAO CONSEGUE RESOLVER
   User: {
-    perfil: (user: any) => {
-      return collection_Perfil_HARD.find(p => p.id === user.perfil)
-    }
+    perfil,
   },
 
   Mutation: {
-    createUser: (_, args: any) => {
-
-      // VERIFICAR SE EXIST
-      const { email  } = args
-      const exist = collection_Users_HARD.some(u => u.email === email)
-      if(exist) throw new Error(`${MSG.ERR_EXCEPTION} ${MSG.NOT_REGISTRATION} ${email}`)
-
-
-      const user = { 
-        ...args, id: makeID(), perfil: '2' 
-      }
-
-      collection_Users_HARD.push(user)
-
-      return user
-    }
-  }
-  
+    createUser,
+  },
 }
-
+//
