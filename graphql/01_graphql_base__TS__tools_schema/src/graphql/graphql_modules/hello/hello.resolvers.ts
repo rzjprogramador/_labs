@@ -1,17 +1,4 @@
-
-
-/*
-* METODOS RESOLVEDORES DE CONSULTA E MODIFICACOES
-*/
-
-
-const hello = () => {
-  return {
-    texto: 'Hello Texto 1 ',
-    logico: true
-  }
-}
-
+import { hello } from './methods/create_hello'
 
 /*
 * EXPORT REFERENCIAS RESOLVERS

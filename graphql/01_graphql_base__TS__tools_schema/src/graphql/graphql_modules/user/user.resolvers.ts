@@ -1,51 +1,6 @@
-import { collection_Users_HARD } from '../generics_graphql/hardcoders/repositorios_hardcode/usuarios_hardcode'
-import { collection_Perfil_HARD } from '../generics_graphql/hardcoders/repositorios_hardcode/perfis_hardcode'
-import { makeID } from '../../utils_gql/makes/makeID'
-import { MSG } from '../../utils_gql/mensagens/error_mensagens'
-
-/*
-* METODOS RESOLVEDORES DE CONSULTA E MODIFICACOES
-*/
-
-const getUser = (_: any, args: any) => {
-  const { id, email } = args
-
-  if(id) {
-    return collection_Users_HARD.find(user => user.id === id)
-  }
-  if(email) {
-    return collection_Users_HARD.find(user => user.email === email)
-  }
-}
-
-//
-
-const allUsers = () => collection_Users_HARD
-
-//
-
-const createUser = (_: any, args: any) => {
-
-  // VERIFICAR SE EXIST
-  const { email  } = args
-  const exist = collection_Users_HARD.some(u => u.email === email)
-  if(exist) throw new Error(`${MSG.ERR_EXCEPTION} ${MSG.NOT_REGISTRATION} ${email}`)
-
-
-  const user = { 
-    ...args, id: makeID(), perfil: '2' 
-  }
-
-  collection_Users_HARD.push(user)
-
-  return user
-}
-//
-
-const perfil = (user: any) => {
-  return collection_Perfil_HARD.find(p => p.id === user.perfil)
-}
-//
+import { perfil } from './methods/perfil'
+import { getUser, allUsers } from './methods/get_user'
+import { createUser } from './methods/create_user'
 
 /*
 * EXPORT REFERENCIAS RESOLVERS
@@ -57,10 +12,10 @@ export default {
     allUsers,
   },
   
-  // RESOLVER TRIVIAL : CAMPO QUE A QUERY NAO CONSEGUE RESOLVER
   User: {
-    perfil,
+    perfil, // RESOLVER TRIVIAL : CAMPO QUE A QUERY NAO CONSEGUE RESOLVER
   },
+    
 
   Mutation: {
     createUser,

@@ -1,3 +1,3 @@
-import { v4 as uuidv4 } from 'uuid'
+import crypto from 'crypto'
 
-export const makeID = () => uuidv4()
+export const makeID = () => crypto.randomUUID()
