@@ -1,12 +1,10 @@
-import { mergeResolvers } from '@graphql-tools/merge'
-
 import { collection_Users_HARD } from '../generics_graphql/hardcoders/repositorios_hardcode/usuarios_hardcode'
 import { collection_Perfil_HARD } from '../generics_graphql/hardcoders/repositorios_hardcode/perfis_hardcode'
 import { makeID } from '../../utils_gql/makes/makeID'
 import { MSG } from '../../utils_gql/mensagens/error_mensagens'
 
 /*
-* METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
+* METODOS RESOLVEDORES DE CONSULTA E MODIFICACOES
 */
 
 const getUser = (_: any, args: any) => {
@@ -22,8 +20,7 @@ const getUser = (_: any, args: any) => {
 
 
 /*
-* APONTAMENTO DE RESOLVERS
-* CENTRALIZAR MODULO NO CENTRALIZERS/RESOLVERS
+* EXPORT REFERENCIAS RESOLVERS
 */
 
 export default {

@@ -1,19 +1,20 @@
 
+
 /*
-* METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
+* METODOS RESOLVEDORES DE CONSULTA E MODIFICACOES
 */
 
 
 const hello = () => {
   return {
-    texto: 'Hello Texto',
+    texto: 'Hello Texto 1 ',
     logico: true
   }
 }
 
 
 /*
-* APONTAMENTO DE RESOLVERS
+* EXPORT REFERENCIAS RESOLVERS
 */
 
 export default {

@@ -1,8 +1,7 @@
-import { mergeResolvers } from '@graphql-tools/merge'
 import { collection_Perfil_HARD } from '../generics_graphql/hardcoders/repositorios_hardcode/perfis_hardcode'
 
 /*
-* METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
+* METODOS RESOLVEDORES DE CONSULTA E MODIFICACOES
 */
 
 const collectionPerfil = () => {
@@ -11,8 +10,7 @@ const collectionPerfil = () => {
 
 
 /*
-* APONTAMENTO DE RESOLVERS
-* CENTRALIZAR MODULO NO CENTRALIZERS/RESOLVERS
+* EXPORT REFERENCIAS RESOLVERS
 */
 
 export default {

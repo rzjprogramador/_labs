@@ -1,9 +1,7 @@
-import { mergeResolvers } from '@graphql-tools/merge'
-
 import { collection_Produtos_HARD } from '../generics_graphql/hardcoders/repositorios_hardcode/produtos_hardcode'
 
 /*
-* METODOS RESOLVEDORES DE CONSULTA E MODIFICAOES :: REFERENCIAR NO EXPORTADOR 
+* METODOS RESOLVEDORES DE CONSULTA E MODIFICACOES 
 */
 
 const getProduto = (_: any, args: any) => {
@@ -13,8 +11,7 @@ const getProduto = (_: any, args: any) => {
 
 
 /*
-* APONTAMENTO DE RESOLVERS
-* CENTRALIZAR MODULO NO CENTRALIZERS/RESOLVERS
+* EXPORT REFERENCIAS RESOLVERS
 */
 
 export default {
