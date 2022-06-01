@@ -3,7 +3,7 @@ import { MSG } from '../utils_gql/mensagens/error_mensagens'
 // FORMATACOES DE ERROS
 
 const notCadastro = (err: any) => {
-  if(err.message.startsWith(`${MSG.NOT_CADASTRO}`)) {
+  if(err.message.startsWith(`${MSG.ERR_EXCEPTION}`)) {
     return new Error(err.message)
   }
 }
