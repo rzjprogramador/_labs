@@ -4,9 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "grap": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/graphql/_app/servers/graphql_server/index.ts",
-    "dev": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app/servers/graphql_server/index.ts",
-    "dev:rest": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app/server/express_server/server.ts",
+    "dev": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/graphql/_app/servers/graphql_server/index.ts",
+    "dev:rest": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app_rest/server/express_server/server.ts",
     "vitest": "vitest",
     "test": "jest",
     "test:e2e": "jest --detectOpenHandles --config jest-e2e.config.ts --forceExit"
