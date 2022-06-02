@@ -1,4 +1,4 @@
-import { collection_Produtos_HARD } from '../../generics_graphql/hardcoders/repositorios_hardcode/produtos_hardcode'
+import { collection_Produtos_HARD } from '../../../../../tests_in_memory/entities/produto/produtos_hardcode'
 
 export const getProduto = (_: any, args: any) => {
   const { id, } = args

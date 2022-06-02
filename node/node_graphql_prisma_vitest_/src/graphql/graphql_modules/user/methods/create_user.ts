@@ -1,6 +1,6 @@
 import { makeID } from '../../../../generics_app/helpers/makes/makeID'
 import { MSG } from '../../../../generics_app/helpers/mensagens/error_mensagens'
-import { collection_Users_HARD } from '../../generics_graphql/hardcoders/repositorios_hardcode/usuarios_hardcode'
+import { collection_Users_HARD } from '../../../../../tests_in_memory/entities/users/users_hardcode'
 
 export const createUser = (_: any, args: any) => {
 

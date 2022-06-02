@@ -11,7 +11,7 @@ type User {
 type Query {
   getUser(id: ID, email: String): User
   allUsers: [User]
-  # perfis: [Perfil]
+  perfis: [Perfil]
 }
 
 type Mutation {

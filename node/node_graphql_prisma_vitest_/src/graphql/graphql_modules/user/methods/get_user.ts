@@ -1,4 +1,4 @@
-import { collection_Users_HARD } from '../../generics_graphql/hardcoders/repositorios_hardcode/usuarios_hardcode'
+import { collection_Users_HARD } from '../../../../../tests_in_memory/entities/users/users_hardcode'
 
 export const getUser = (_: any, args: any) => {
   const { id, email } = args
