@@ -8,12 +8,19 @@ type User {
   perfil: Perfil
 }
 
+input UserInput {
+  nome: String
+  email: String
+  password: String
+}
+
 type Query {
   getUser(id: ID, email: String): User
   allUsers: [User]
-  # perfis: [Perfil]
+  perfis: [Perfil]
 }
 
 type Mutation {
-  createUser(nome: String, email: String, password: String): User!
+  createUser(data: UserInput): User!
+  updateUser(id: ID, data: UserInput): User!
 }
