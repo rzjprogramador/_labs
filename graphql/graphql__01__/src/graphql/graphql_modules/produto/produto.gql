@@ -1,0 +1,11 @@
+
+type Produto {
+  id: ID
+  nome: String
+  preco: Float
+}
+
+type Query {
+  getProduto(id: ID): Produto
+  allProduto: [Produto]
+}

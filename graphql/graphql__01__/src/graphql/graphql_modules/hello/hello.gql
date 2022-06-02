@@ -1,0 +1,10 @@
+
+type Hello {
+  texto: String
+  logico: Boolean
+}
+
+type Query { 
+    hello: Hello
+}
+

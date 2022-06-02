@@ -1,0 +1,17 @@
+
+
+enum EnumPerfil {
+    ADMIN
+    USER
+    FUNCIONARIO
+  }
+  
+type Perfil {
+  id: ID
+  cargo: EnumPerfil
+}
+
+type Query {
+  collectionPerfil: [Perfil]
+  
+}
