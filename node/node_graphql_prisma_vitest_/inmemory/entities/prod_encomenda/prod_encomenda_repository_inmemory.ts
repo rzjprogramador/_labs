@@ -1,5 +1,5 @@
 import { makeID } from '../../../src/generics_app/helpers/makes/makeID'
-import { ProdEncomendaRepository, CreateProdEncomenda } from '../../../src/modules/prodEncomenda/usecases/contracts/prod_encomenda_repository'
+import { ProdEncomendaRepository, CreateProdEncomenda } from '../../../src/modules/prodEncomenda/contracts/prod_encomenda_repository'
 import { ProdEncomenda } from '../../../src/modules/prodEncomenda/entity/ProdEncomenda.entity'
 
 export class ProdEncomendaRepositoryInMemory implements ProdEncomendaRepository {

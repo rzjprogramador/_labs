@@ -1,14 +1,14 @@
 import { CreateProdEncomenda } from '../usecases/implementations/create_prod_encomenda_service'
-import { InMemoryPrismaProdEncomendaRepository } from '../../../../tests_in_memory/repositories/inmemory_prodencomenda_repositories'
+import { ProdEncomendaRepositoryInMemory } from '../../../../inmemory/entities/prod_encomenda/prod_encomenda_repository_inmemory'
 
 describe('ProdEncomenda', () => {
 
   test('SUCESSO: Criar novo ProdEncomenda', async () => {
     // FAÇO A INVERSAO DE DEPENNCIA NORMAL E DOU PARA OS ERVICO O REPO INMEMORY
 
-    const inMemoryPrismaProdEncomendaRepository = new InMemoryPrismaProdEncomendaRepository()
+    const prodEncomendaRepositoryInMemory = new ProdEncomendaRepositoryInMemory()
 
-    const createProdEncomenda = new CreateProdEncomenda(inMemoryPrismaProdEncomendaRepository)
+    const createProdEncomenda = new CreateProdEncomenda(prodEncomendaRepositoryInMemory)
 
     // TESTANDO SE NAO RETORNOU ERRO DE EXCESAO NA CRIACAO 
     // SUCESSO:: ESPERO QUE A RESOLUCAO DA PROMESSA NAO DISPARE NENHUM ERRO
@@ -19,7 +19,7 @@ describe('ProdEncomenda', () => {
 
     // VERIFICANDO SE CRIOU CORRETAMENTE DENTRO DO ARRAY INMEMORY O OBJETO DA ENTIDADE
 
-  expect(inMemoryPrismaProdEncomendaRepository.items).toEqual(expect.arrayContaining([
+  expect(prodEncomendaRepositoryInMemory.items).toEqual(expect.arrayContaining([
     expect.objectContaining({ nome: 'prod_encomenda_01', preco: 15 }) 
   ]))
 
@@ -28,8 +28,8 @@ describe('ProdEncomenda', () => {
 
   test('FALHA: Não Criar novo ProdEncomenda com nome invalido', async () => {
 
-    const inMemoryPrismaProdEncomendaRepository = new InMemoryPrismaProdEncomendaRepository()
-    const createProdEncomenda = new CreateProdEncomenda(inMemoryPrismaProdEncomendaRepository)
+    const prodEncomendaRepositoryInMemory = new ProdEncomendaRepositoryInMemory()
+    const createProdEncomenda = new CreateProdEncomenda(prodEncomendaRepositoryInMemory)
 
     await expect(createProdEncomenda.execute({ nome: '', preco: 15 }))
     .rejects
@@ -37,7 +37,7 @@ describe('ProdEncomenda', () => {
 
     // É PRA FALHAR - ENTÃO CAPTURO COM REJECTS -- ESPERO QUE MEU ARRAY ESTEJA VAZIO SE O NOME NÃO FOR IGUAL OA PASSADO -- É PRA NAO CRIAR NADA
 
-   expect(inMemoryPrismaProdEncomendaRepository.items).toEqual(expect.arrayContaining([ ]))
+   expect(prodEncomendaRepositoryInMemory.items).toEqual(expect.arrayContaining([ ]))
 
   }) // 
 

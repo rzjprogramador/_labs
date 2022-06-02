@@ -1,16 +1,16 @@
-import { collection_Users_HARD } from '../../../../../tests_in_memory/entities/users/users_hardcode'
+import { users_collection_HARD } from '../../../../../inmemory/entities/users/users_collection_hardcode'
 
 export const getUser = (_: any, args: any) => {
   const { id, email } = args
 
   if(id) {
-    return collection_Users_HARD.find(user => user.id === id)
+    return users_collection_HARD.find(user => user.id === id)
   }
   if(email) {
-    return collection_Users_HARD.find(user => user.email === email)
+    return users_collection_HARD.find(user => user.email === email)
   }
 }
 
 //
 
-export const allUsers = () => collection_Users_HARD
+export const allUsers = () => users_collection_HARD

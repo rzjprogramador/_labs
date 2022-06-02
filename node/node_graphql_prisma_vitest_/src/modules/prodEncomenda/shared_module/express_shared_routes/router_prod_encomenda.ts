@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { createProdEncomendaFactory } from '../../usecases/main_injecoes/create_prod_encomenda'
+import { createProdEncomendaFactory } from '../../usecases/injections/create_prod_encomenda_controll'
 
 export const routerProdEncomenda = Router()
 

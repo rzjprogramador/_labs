@@ -1,4 +1,4 @@
-import { ProdEncomendaRepository } from '../contracts/prod_encomenda_repository'
+import { ProdEncomendaRepository } from '../../contracts/prod_encomenda_repository'
 
 export class ListProdEncomendas {
   constructor(

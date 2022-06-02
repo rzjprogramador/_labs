@@ -4,7 +4,6 @@
       "module": "commonjs",
       "outDir": "./dist",
       "typeRoots": ["node_modules/@types"],
-    //   "types": ["typed-graphql"],
       "removeComments": true,
       "noEmitOnError": true,
       "strict": true,
@@ -28,6 +27,6 @@
   },
   
   "include": [ // INCLUI NO BUILD E NA LEITURA DE PASTA NA RAIZ DO PROJETO
-      "src/**/*.ts", "tests_in_memory"],
+      "src/**/*.ts", "inmemory/**/**/*.ts"],
   "exclude": [],
 }

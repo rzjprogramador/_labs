@@ -1,6 +1,6 @@
-import { collection_Produtos_HARD } from '../../../../../tests_in_memory/entities/produto/produtos_hardcode'
+import { produtos_collection_HARD } from '../../../../../inmemory/entities/produto/produtos_collection_hardcode'
 
 export const getProduto = (_: any, args: any) => {
   const { id, } = args
-  return collection_Produtos_HARD.find(item => item.id === id)
+  return produtos_collection_HARD.find(item => item.id === id)
 }

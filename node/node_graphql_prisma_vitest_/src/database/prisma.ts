@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 
 
-export const prisma = new PrismaClient
+export const DB = new PrismaClient
 
-// POLO UNICO PRISMA - APARA SE CONECTAR AO BANCO
+// db => POLO UNICO PRISMA - PARA SE CONECTAR AO BANCO

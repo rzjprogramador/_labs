@@ -1,4 +1,4 @@
-import { ProdEncomenda } from '../../entity/ProdEncomenda.entity'
+import { ProdEncomenda } from '../entity/ProdEncomenda.entity'
 
 export interface CreateProdEncomenda {
   nome: string
