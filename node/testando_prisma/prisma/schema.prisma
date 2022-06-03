@@ -15,7 +15,6 @@ model User {
     estabelecimento String
     email           String    @unique
     password        String
-    ultimoLogin     DateTime?
 
     habilitacao StatusHabilitacao @default(DESATIVADO)
     tipoUser    TipoUser          @default(CLIENTE)
@@ -28,6 +27,7 @@ model User {
     indexRef  Int      @default(autoincrement())
     createdAt DateTime @default(now())
     updated   DateTime @updatedAt()
+    ultimoLogin     DateTime?
 
 
     @@index([nome])
