@@ -15,9 +15,8 @@ export class User {
   ultimoLogin?: Date
 
   private constructor(
-    props: Omit<User, 'id'>,
-    id?: string,
-    // receber todas props da classe User menos a "id", depois vou receber o id como opcional para Entidade que ja tem, nao recriar ou pra nova criar
+    props: Omit<User, 'id'>, id?: string,
+    // receber todas props da classe User menos a "id", TODO depois vou receber o id como opcional para Entidade que ja tem, nao recriar ou pra nova criar
   ) {
     Object.assign(this, props)
     // A cada propriedade vai adicionar o this, Para nao atribuir cada campo recebido ao campo da classe

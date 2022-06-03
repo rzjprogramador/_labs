@@ -2,8 +2,6 @@ import { User } from '../entity/User.entity'
 
 describe('ProdEncomenda', () => {
   test('criar objeto da entidade user', async () => {
-    //   const user = new User()
-
     const userRequest = {
       nome: 'request_nome',
       estabelecimento: 'request_estabelecimento',
@@ -12,9 +10,10 @@ describe('ProdEncomenda', () => {
     }
 
     const newUserUm = User.create(userRequest)
-
     console.log(newUserUm)
 
-    expect(User.create(newUserUm)).toHaveProperty('id')
+    const createUser = User.create(newUserUm)
+
+    expect(createUser).toHaveProperty('id')
   }) //
 })
