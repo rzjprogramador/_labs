@@ -10,108 +10,20 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model User {
-    nome            String
-    estabelecimento String
-    email           String    @unique
-    password        String
-    ultimoLogin     DateTime?
+model Hello {
+    idDB     String  @id @default(uuid())
+    id       String?
+    indexRef Int     @default(autoincrement())
+    nome     String
+    preco    Float
 
-    habilitacao StatusHabilitacao @default(DESATIVADO)
-    tipoUser    TipoUser          @default(CLIENTE)
-    cargo       CargoUser         @default(USER)
-
-    pedidos Pedido[]
-
-    id        String?
-    idDB      String   @id @default(uuid())
-    indexRef  Int      @default(autoincrement())
-    createdAt DateTime @default(now())
-    updated   DateTime @updatedAt()
-
-
-    @@index([nome])
-    @@map("users")
+    @@map("hellos")
 }
 
-model Pedido {
-    codigo Int @default(autoincrement())
+model ProdEncomenda {
+    idDB  String @id @default(uuid())
+    nome  String
+    preco Float
 
-    id        String?
-    idDB      String   @id @default(uuid())
-    indexRef  Int      @default(autoincrement())
-    createdAt DateTime @default(now())
-    updated   DateTime @updatedAt()
-
-    users User[]
-
-
-    @@index([codigo])
-    @@map("pedidos")
+    @@map("prod_encomendas")
 }
-
-model Produto {
-    codigo Int    @default(autoincrement())
-    nome   String
-
-    id        String?
-    idDB      String   @id @default(uuid())
-    indexRef  Int      @default(autoincrement())
-    createdAt DateTime @default(now())
-    updated   DateTime @updatedAt()
-
-
-    @@index([nome])
-    @@map("produtos")
-}
-
-enum CargoUser {
-    USER
-    ADMIN
-    MODERADOR
-    FUNCIONARIO
-    ENTREGADOR
-}
-
-enum TipoUser {
-    CLIENTE
-    PADRAO
-    LOJISTA
-    FUNCIONARIO
-}
-
-enum StatusEntrega {
-    HA_RECOLHER
-    ANALISE
-    TRANSITANDO
-    ENTREGUE
-}
-
-enum StatusHabilitacao {
-    DESATIVADO
-    HABILITADO
-    EXCLUIDO
-}
-
-enum AreaCobertura {
-    APROVADO
-    INDISPONIVEL
-}
-
-// model Hello {
-//     idDB     String  @id @default(uuid())
-//     id       String?
-//     indexRef Int     @default(autoincrement())
-//     nome     String
-//     preco    Float
-
-//     @@map("hellos")
-// }
-
-// model ProdEncomenda {
-//     idDB  String @id @default(uuid())
-//     nome  String
-//     preco Float
-
-//     @@map("prod_encomendas")
-// }

@@ -1,0 +1,16 @@
+### 
+# -------------------------------------
+# LISTAR TODOS OS DADOS
+GET {{host}}/encomenda
+Content-Type: application/json
+
+### 
+# -------------------------------------
+# INSERIR
+POST {{host}}/encomenda
+Content-Type: application/json
+
+{
+  "nome": "produto_encomenda2",
+  "preco": 222
+}
