@@ -1,10 +1,10 @@
-console.log     (" Corrigir")
+console.log     (" Corrigir    "   )
 
 const a = 1000
-const      b = 2000
+const      b =    2000
 
-function soma           (a: number,     b: number)     {
-    console.log (a + b)
+function soma           (a: number,        b: number)     {
+    console.log (a +    b)
 }
 
-soma (10,       10)
+soma (10,         10)
