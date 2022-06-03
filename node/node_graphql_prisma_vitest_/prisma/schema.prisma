@@ -10,17 +10,12 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model User {
-
-    model Pedido {}
-
-    model Produto {}
-
-    model Hello {
-    idDB  String  @id @default(uuid())
-    id    String?
-    nome  String
-    preco Float
+model Hello {
+    idDB     String  @id @default(uuid())
+    id       String?
+    indexRef Int     @default(autoincrement())
+    nome     String
+    preco    Float
 
     @@map("hellos")
 }
@@ -31,4 +26,46 @@ model ProdEncomenda {
     preco Float
 
     @@map("prod_encomendas")
+}
+
+model User {
+    nome String
+
+    id        String?
+    idDB      String   @id @default(uuid())
+    indexRef  Int      @default(autoincrement())
+    createdAt DateTime @default(now())
+    updated   DateTime @updatedAt()
+
+
+    @@index([nome])
+    @@map("users")
+}
+
+model Pedido {
+    codigo Int @default(autoincrement())
+
+    id        String?
+    idDB      String   @id @default(uuid())
+    indexRef  Int      @default(autoincrement())
+    createdAt DateTime @default(now())
+    updated   DateTime @updatedAt()
+
+
+    @@index([codigo])
+    @@map("pedidos")
+}
+
+model Produto {
+    nome String
+
+    id        String?
+    idDB      String   @id @default(uuid())
+    indexRef  Int      @default(autoincrement())
+    createdAt DateTime @default(now())
+    updated   DateTime @updatedAt()
+
+
+    @@index([nome])
+    @@map("produtos")
 }

@@ -8,7 +8,8 @@
     "dev:rest": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app_rest/server/express_server/server.ts",
     "vitest": "vitest",
     "test": "jest",
-    "test:e2e": "jest --detectOpenHandles --config jest-e2e.config.ts --forceExit"
+    "test:e2e": "jest --detectOpenHandles --config jest-e2e.config.ts --forceExit",
+    "linter": "eslint"
   },
   "dependencies": {
     "@prisma/client": "^3.14.0",
