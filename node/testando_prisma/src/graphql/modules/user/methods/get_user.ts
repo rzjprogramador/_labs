@@ -1,4 +1,4 @@
-import { users_collection_HARD } from '../../../../../inmemory/entities/users/users_collection_hardcode'
+import { users_collection_HARD } from '../../../../../inmemory/entities/user/user_collection_hardcode'
 
 export const getUser = (_: any, args: any) => {
   const { id, email } = args
