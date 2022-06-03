@@ -10,26 +10,18 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Hello {
-    idDB     String  @id @default(uuid())
-    id       String?
-    indexRef Int     @default(autoincrement())
-    nome     String
-    preco    Float
-
-    @@map("hellos")
-}
-
-model ProdEncomenda {
-    idDB  String @id @default(uuid())
-    nome  String
-    preco Float
-
-    @@map("prod_encomendas")
-}
-
 model User {
-    nome String
+    nome            String
+    estabelecimento String
+    email           String    @unique
+    password        String
+    ultimoLogin     DateTime?
+
+    habilitacao StatusHabilitacao @default(DESATIVADO)
+    tipoUser    TipoUser          @default(CLIENTE)
+    cargo       CargoUser         @default(USER)
+
+    pedidos Pedido[]
 
     id        String?
     idDB      String   @id @default(uuid())
@@ -51,13 +43,16 @@ model Pedido {
     createdAt DateTime @default(now())
     updated   DateTime @updatedAt()
 
+    users User[]
+
 
     @@index([codigo])
     @@map("pedidos")
 }
 
 model Produto {
-    nome String
+    codigo Int    @default(autoincrement())
+    nome   String
 
     id        String?
     idDB      String   @id @default(uuid())
@@ -69,3 +64,54 @@ model Produto {
     @@index([nome])
     @@map("produtos")
 }
+
+enum CargoUser {
+    USER
+    ADMIN
+    MODERADOR
+    FUNCIONARIO
+    ENTREGADOR
+}
+
+enum TipoUser {
+    CLIENTE
+    PADRAO
+    LOJISTA
+    FUNCIONARIO
+}
+
+enum StatusEntrega {
+    HA_RECOLHER
+    ANALISE
+    TRANSITANDO
+    ENTREGUE
+}
+
+enum StatusHabilitacao {
+    DESATIVADO
+    HABILITADO
+    EXCLUIDO
+}
+
+enum AreaCobertura {
+    APROVADO
+    INDISPONIVEL
+}
+
+// model Hello {
+//     idDB     String  @id @default(uuid())
+//     id       String?
+//     indexRef Int     @default(autoincrement())
+//     nome     String
+//     preco    Float
+
+//     @@map("hellos")
+// }
+
+// model ProdEncomenda {
+//     idDB  String @id @default(uuid())
+//     nome  String
+//     preco Float
+
+//     @@map("prod_encomendas")
+// }
