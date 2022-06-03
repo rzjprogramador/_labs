@@ -2,27 +2,33 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+    provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
 }
 
-model Hello {
-  idDB  String  @id @default(uuid())
-  id    String?
-  nome  String
-  preco Float
+model User {
 
-  @@map("hellos")
+    model Pedido {}
+
+    model Produto {}
+
+    model Hello {
+    idDB  String  @id @default(uuid())
+    id    String?
+    nome  String
+    preco Float
+
+    @@map("hellos")
 }
 
 model ProdEncomenda {
-  idDB  String @id @default(uuid())
-  nome  String
-  preco Float
+    idDB  String @id @default(uuid())
+    nome  String
+    preco Float
 
-  @@map("prod_encomendas")
+    @@map("prod_encomendas")
 }

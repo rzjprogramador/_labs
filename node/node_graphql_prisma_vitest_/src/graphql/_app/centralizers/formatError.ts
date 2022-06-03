@@ -1,4 +1,4 @@
-import { MSG } from '../../generics_app/helpers/mensagens/error_mensagens'
+import { MSG } from '../../../generics/helpers/mensagens/error_mensagens'
 
 // FORMATACOES DE ERROS
 

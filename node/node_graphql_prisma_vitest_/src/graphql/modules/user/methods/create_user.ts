@@ -1,5 +1,5 @@
-import { makeID } from '../../../../generics_app/helpers/makes/makeID'
-import { MSG } from '../../../../generics_app/helpers/mensagens/error_mensagens'
+import { makeID } from '../../../../generics/helpers/makes/makeID'
+import { MSG } from '../../../../generics/helpers/mensagens/error_mensagens'
 import { users_collection_HARD } from '../../../../../inmemory/entities/users/users_collection_hardcode'
 
 export const createUser = (_: any, args: any) => {
