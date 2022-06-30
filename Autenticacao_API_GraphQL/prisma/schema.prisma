@@ -10,42 +10,19 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Cliente {
-    id            String @id @default(uuid())
+model Users {
+    idb           String  @id @default(uuid())
+    id            String?
     nome          String
-    email         String @unique
+    email         String  @unique
     password      String
     identificador String
 
+    createdAt  DateTime?
+    updatedAt  DateTime?
+    utimoLogin DateTime?
+
+
     @@index([email])
-    @@map("clientes")
-}
-
-model Endereco {
-    id         String @id @default(uuid())
-    logradouro String
-    numero     String
-    cep        String
-
-    @@map("enderecos")
-}
-
-model Cidade {
-    id   String @id @default(uuid())
-    nome String
-
-
-    @@map("cidades")
-}
-
-// model Produto {}
-
-// model Pedido {}
-
-// ENUMS =================
-
-enum TipoUser {
-    CLIENTE_PJ
-    CLIENTE_FISICO
-    ADMIN
+    @@map("users")
 }

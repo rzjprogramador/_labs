@@ -1,9 +1,9 @@
-import { prisma } from '../src/external/database/orm_prisma/_connect_db/prisma_client'
-import { clienteSeedMaker } from '../src/domain/entities/participante/cliente/seed_maker/cliente_seed_maker'
+import { prisma } from '@src/external/database/prisma_cliente/prisma_client'
+import { userSeedMaker } from '@src/seeds/UserSeed'
 
 async function main() {
   // TODOS OS GERADORES DE SEED DE CADA MODULO
-  await clienteSeedMaker()
+  await userSeedMaker()
 }
 
 main()

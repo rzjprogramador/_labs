@@ -1,14 +1,14 @@
-import { prisma } from '@src/external/database/orm_prisma/_connect_db/prisma_client';
-import { Cliente } from '@src/models/Cliente'
+import { IUser } from '@src/contracts/User'
+import { prisma } from '@src/external/database/prisma_cliente/prisma_client'
 import { makeID } from '@src/globals/makers/maker_identificator'
 
 // METODO SEED QUE SERA CHAMADO NO SEED PRINCIPAL DO /PRISMA
-type ClienteSeed = Cliente
+type UserSeed = IUser
 
-export async function clienteSeedMaker() {
+export async function userSeedMaker() {
   // .............................................
   /* CADA USER SEED */
-  const clienteAdminSeed: ClienteSeed = await prisma.cliente.upsert({
+  const userAdminSeed: UserSeed = await prisma.users.upsert({
     where: { email: 'adminSedd@email.com' },
     update: {},
     create: {
@@ -20,8 +20,8 @@ export async function clienteSeedMaker() {
     },
   })
   // .............................................
-  /* CADA cliente SEED */
-  const clienteDoisSeed: ClienteSeed = await prisma.cliente.upsert({
+  /* CADA user SEED */
+  const userDoisSeed: UserSeed = await prisma.users.upsert({
     where: { email: 'doisSedd@email.com' },
     update: {},
     create: {
@@ -35,7 +35,7 @@ export async function clienteSeedMaker() {
   // .............................................
   // .............................................
   /* CADA USER SEED */
-  const clienteTresSeed: ClienteSeed = await prisma.cliente.upsert({
+  const userTresSeed: UserSeed = await prisma.users.upsert({
     where: { email: 'TresSedd@email.com' },
     update: {},
     create: {
