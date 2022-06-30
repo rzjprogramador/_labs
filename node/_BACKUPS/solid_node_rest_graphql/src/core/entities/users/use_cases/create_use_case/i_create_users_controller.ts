@@ -1,5 +1,0 @@
-
-
-interface ICreateUsersController {}
-
-export { ICreateUsersController }

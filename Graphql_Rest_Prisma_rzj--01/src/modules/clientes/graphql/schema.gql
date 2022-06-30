@@ -1,0 +1,28 @@
+scalar Date
+
+type Cliente {
+  id: ID
+  nome: String
+  email: String
+  password: String
+  identificador: String
+}
+
+input CreateClienteInput {
+  nome: String
+  email: String
+  password: String
+  identificador: String
+}
+
+# ###########################################
+# PONTOS DE ENTRADAS :: CONSULTAS & MUTACOES
+# ##########################################
+
+type Query {
+  getAllClientes: [Cliente]
+}
+
+type Mutation {
+  createCliente(nome: String, email: String, password: String, identificador: String): Cliente
+}

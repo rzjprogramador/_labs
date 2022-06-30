@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// MODELOS DAS TABELAS
+
+model ProdutoEncomenda {
+    id           String   @id @default(uuid())
+    nome         String
+    preco        Decimal
+    created_at   DateTime @default(now())
+    quantidade   String
+    destinatario String
+    comprador    String
+    logradouro   String
+    cep          String
+    complemento  String
+
+    // @@map("ProdutoEncomenda")
+}
+// resolver objeto complexo : dataEncomenda >> no model do banco 

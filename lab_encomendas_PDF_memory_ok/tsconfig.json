@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "commonjs",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "removeComments": true,
+        "noEmitOnError": true,
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "strictPropertyInitialization": false,
+        "allowJs": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "baseUrl": "src",
+        "paths": {
+            "@/*": [
+                "*"
+            ]
+        },
+    },
+    "typeRoots": [
+        "src/@types",
+        "./node_modules/@types"
+    ],
+    "include": [ // inclui no build js
+        "src/**/*.ts"
+, "src/domain/request-adapt/create-produto-encomenda-pdf-usecasets"    ],
+    "exclude": []
+}

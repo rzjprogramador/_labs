@@ -1,4 +1,0 @@
-
-npx prisma migrate dev --name <nome da migracao>
-
-npx prisma studio

@@ -1,9 +1,0 @@
-root = true
-
-[*]
-end_of_line = lf                        # ..padrao sistema operacional
-indent_style = space                    # .. tipo de identacao 
-indent_size = 4                         # ..tamanho do tipo da identacao identar
-charset = utf-8                         # .. linguagem
-trim_trailing_whitespace = false        # .. retirar espaço em branco no fim da linha
-insert_final_newline = false            # .. inserir cursor na outra linha 
