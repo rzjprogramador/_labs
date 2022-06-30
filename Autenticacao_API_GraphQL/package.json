@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:server": "tsnd --transpile-only --ignore-watch node_modules src/server.ts",
+    "dev": "tsnd --transpile-only --ignore-watch node_modules src/server.ts",
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "nao": "npx dotenv-cli -e .env -- npx prisma migrate reset --force --skip-generate --preview-feature",
     "dev:rest": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app_rest/server/express_server/server.ts",
@@ -27,7 +27,7 @@
     "bcryptjs": "^2.4.3",
     "class-validator": "^0.13.2",
     "dotenv": "^16.0.1",
-    "graphql": "^16.5.0",
+    "graphql": "^15.3.0",
     "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
     "reflect-metadata": "^0.1.13",

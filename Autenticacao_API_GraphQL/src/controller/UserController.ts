@@ -1,7 +1,8 @@
-import { User } from '@src/entities/User'
-import { prisma } from '@src/external/database/prisma_cliente/prisma_client'
 import { Resolver, Query, Arg, Mutation } from 'type-graphql'
 import { hash } from 'bcryptjs'
+
+import { User } from '../entities/User'
+import { prisma } from '../external/database/prisma_cliente/prisma_client'
 
 @Resolver(User)
 export class UserController {

@@ -4,9 +4,11 @@
 
   contexto: instalar com yarn add
 
-  apollo-server bcryptjs class-validator graphql jsonwebtoken reflect-metadata type-graphql @prisma/client dotenv graphql module-alias vite-tsconfig-paths
+  observacao em Junho22 o graphql tem que ser "graphql": "^15.3.0",   -- problema com o typegraphql
+
+  apollo-server bcryptjs class-validator jsonwebtoken reflect-metadata @prisma/client dotenv module-alias vite-tsconfig-paths graphql class-validator type-graphql
   
-  `;
+  `
 }
 
 {
@@ -15,7 +17,7 @@
 
   @types/bcryptjs @types/jsonwebtoken ts-node-dev typescript @types/node prisma tsconfig-paths vitest
   
-  `;
+  `
 }
 
 {
@@ -27,7 +29,7 @@
       "seed": "ts-node -r tsconfig-paths/register prisma/seed.ts"
     }
   
-  `;
+  `
 }
 
 {
@@ -40,5 +42,5 @@
     "vitest": "vitest",
     "pretest": "npx dotenv-cli -e .env.test -- npx prisma migrate reset --force --skip-generate --preview-feature"
   
-  `;
+  `
 }
