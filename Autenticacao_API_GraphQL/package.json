@@ -1,0 +1,43 @@
+{
+  "name": "Autenticacao_API_GraphQL",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:server": "tsnd --transpile-only --ignore-watch node_modules src/server.ts",
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "nao": "npx dotenv-cli -e .env -- npx prisma migrate reset --force --skip-generate --preview-feature",
+    "dev:rest": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app_rest/server/express_server/server.ts",
+    "vitest": "vitest",
+    "pretest": "npx dotenv-cli -e .env.test -- npx prisma migrate reset --force --skip-generate --preview-feature"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^18.0.0",
+    "prisma": "^4.0.0",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4",
+    "vitest": "^0.16.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.0.0",
+    "apollo-server": "^3.9.0",
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.13.2",
+    "dotenv": "^16.0.1",
+    "graphql": "^16.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1",
+    "vite-tsconfig-paths": "^3.5.0"
+  },
+  "_moduleAliases": {
+    "@src/": "./src/"
+  },
+  "prisma": {
+    "seed": "ts-node -r tsconfig-paths/register prisma/seed.ts"
+  }
+}
