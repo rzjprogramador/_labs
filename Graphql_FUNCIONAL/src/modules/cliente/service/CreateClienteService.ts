@@ -5,8 +5,16 @@ export async function CreateClienteService(request: Cliente) {
 
   // * REGRAS COM OS CAMPOS DESEMPACOTADOS - ANTES DE SALVAR PODE FAZER AQUI *
   // .. regras.
+
+  const nomeModificado = nome.toUpperCase()
+
   //
 
-  const newClienteService = await Cliente.create({ nome, email, password, identificador })
+  const newClienteService = await Cliente.create({
+    nome: nomeModificado,
+    email,
+    password,
+    identificador,
+  })
   return newClienteService
 }
