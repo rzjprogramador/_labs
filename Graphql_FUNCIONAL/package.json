@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules -r tsconfig-paths/register src/graphql/_app/servers/graphql_server/index.ts",
+    "dev": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules -r tsconfig-paths/register src/servers/graphql/_app/servers/graphql_server/index.ts",
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "nao": "npx dotenv-cli -e .env -- npx prisma migrate reset --force --skip-generate --preview-feature",
     "dev:rest": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/_app_rest/server/express_server/server.ts",

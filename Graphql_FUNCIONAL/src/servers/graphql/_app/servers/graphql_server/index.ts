@@ -6,7 +6,7 @@ import typeDefs from '../../centralizers/typedefs'
 import resolvers from '../../centralizers/resolvers'
 import { context } from '../../centralizers/context'
 import { formatError } from '../../centralizers/format_error'
-import { ENV_PROJETO } from '../../../../globals/env/enviroments'
+import { ENV_PROJETO } from '../../../../../globals/env/enviroments'
 const server = new ApolloServer({
   introspection: true,
   resolvers,
