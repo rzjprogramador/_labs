@@ -24,5 +24,5 @@ type Query {
 }
 
 type Mutation {
-  createCliente(nome: String, email: String, password: String, identificador: String): Cliente
+  createCliente(input: CreateClienteInput): Cliente
 }

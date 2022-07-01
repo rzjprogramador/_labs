@@ -1,4 +1,4 @@
-import { createCliente } from './handlers/create_cliente'
+import { createCliente } from '@src/graphql/modules/cliente/handlers/CreateClienteResolvers'
 
 export const clienteResolvers = {
   Query: {
@@ -8,6 +8,8 @@ export const clienteResolvers = {
   Mutation: {
     createCliente,
   },
+
+  //
 }
 
 // OBS: IMPORTAR O OBJETO DE RESOLVERS NO CENTRALIZADOR DE RESOLVERS
