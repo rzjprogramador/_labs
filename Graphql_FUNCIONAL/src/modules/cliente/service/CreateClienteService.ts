@@ -1,4 +1,4 @@
-import { Cliente } from '@src/modules/cliente/Cliente'
+import { Cliente } from '@src/modules/cliente/_entity/Cliente'
 
 export async function CreateClienteService(request: Cliente) {
   const { nome, email, password, identificador } = request
