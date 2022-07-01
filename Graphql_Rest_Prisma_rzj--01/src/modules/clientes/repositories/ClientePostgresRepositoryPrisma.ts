@@ -4,7 +4,7 @@ import { Cliente } from '@src/models/Cliente'
 
 export class ClientePostgresRepositoryPrisma implements IClientesRepository {
   async create({ nome, email, password, identificador }: Cliente): Promise<Cliente> {
-    const cliente = await prisma.cliente.create({
+    const cliente = await prisma.clientes.create({
       data: {
         nome,
         email,
@@ -16,7 +16,7 @@ export class ClientePostgresRepositoryPrisma implements IClientesRepository {
   }
 
   async exists(email: any): Promise<boolean> {
-    const cliente = await prisma.cliente.findUnique({
+    const cliente = await prisma.clientes.findUnique({
       where: email,
     })
     return !!cliente

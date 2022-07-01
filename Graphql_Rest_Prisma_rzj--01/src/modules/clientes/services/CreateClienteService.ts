@@ -1,4 +1,4 @@
-import { injectable } from 'tsyringe'
+import { injectable, inject } from 'tsyringe'
 
 import { IClientesRepository } from '@src/modules/clientes/contracts/IClientesRepository'
 import { IClienteRequest } from '@src/modules/clientes/contracts/ClienteDto'
@@ -7,7 +7,10 @@ import { Cliente } from '@src/models/Cliente'
 
 @injectable()
 export class CreateClienteService {
-  constructor(private clienteRepository: IClientesRepository) {}
+  constructor(
+    @inject('ClientePostgresRepositoryPrisma')
+    private clienteRepository: IClientesRepository,
+  ) {}
 
   async execute({ nome, email, password, identificador }: IClienteRequest) {
     const clienteExist = await this.clienteRepository.exists(email)

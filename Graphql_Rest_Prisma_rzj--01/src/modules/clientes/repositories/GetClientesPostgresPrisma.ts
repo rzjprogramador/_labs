@@ -3,6 +3,6 @@ import { GetAllClientesRepository } from '@src/modules/clientes/contracts/IClien
 
 export class GetClientesPostgresPrisma implements GetAllClientesRepository {
   async getAllClientes() {
-    return await prisma.cliente.findMany({})
+    return await prisma.clientes.findMany({})
   }
 } //

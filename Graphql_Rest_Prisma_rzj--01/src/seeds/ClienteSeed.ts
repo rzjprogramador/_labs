@@ -8,7 +8,7 @@ type ClienteSeed = Cliente
 export async function clienteSeedMaker() {
   // .............................................
   /* CADA USER SEED */
-  const clienteAdminSeed: ClienteSeed = await prisma.cliente.upsert({
+  const clienteAdminSeed: ClienteSeed = await prisma.clientes.upsert({
     where: { email: 'adminSedd@email.com' },
     update: {},
     create: {
@@ -21,7 +21,7 @@ export async function clienteSeedMaker() {
   })
   // .............................................
   /* CADA cliente SEED */
-  const clienteDoisSeed: ClienteSeed = await prisma.cliente.upsert({
+  const clienteDoisSeed: ClienteSeed = await prisma.clientes.upsert({
     where: { email: 'doisSedd@email.com' },
     update: {},
     create: {
@@ -35,7 +35,7 @@ export async function clienteSeedMaker() {
   // .............................................
   // .............................................
   /* CADA USER SEED */
-  const clienteTresSeed: ClienteSeed = await prisma.cliente.upsert({
+  const clienteTresSeed: ClienteSeed = await prisma.clientes.upsert({
     where: { email: 'TresSedd@email.com' },
     update: {},
     create: {
