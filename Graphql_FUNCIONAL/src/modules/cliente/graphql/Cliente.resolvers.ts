@@ -1,4 +1,4 @@
-import { createCliente } from '@src/graphql/modules/cliente/handlers/CreateClienteResolvers'
+import { createCliente } from '@src/modules/cliente/graphql/handlers/CreateClienteResolvers'
 
 export const clienteResolvers = {
   Query: {

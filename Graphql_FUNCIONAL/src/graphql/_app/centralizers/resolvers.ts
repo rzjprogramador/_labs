@@ -1,4 +1,4 @@
-import { clienteResolvers } from '../../modules/cliente/Cliente.entity.resolvers'
+import { clienteResolvers } from '../../../modules/cliente/graphql/Cliente.resolvers'
 
 const resolvers = [clienteResolvers]
 

@@ -1,4 +1,4 @@
-import { CreateClienteService } from '@src/domain/modules/cliente/CreateClienteService'
+import { CreateClienteService } from '@src/modules/cliente/CreateClienteService'
 
 type CreateClienteRequestResolver = {
   input: CreateClienteInput
