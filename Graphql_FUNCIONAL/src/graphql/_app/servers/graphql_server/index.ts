@@ -8,7 +8,6 @@ import { context } from '../../centralizers/context'
 import { formatError } from '../../centralizers/format_error'
 import { ENV_PROJETO } from '../../../../globals/env/enviroments'
 const server = new ApolloServer({
-  cache: 'bounded',
   introspection: true,
   resolvers,
   typeDefs,
@@ -17,7 +16,7 @@ const server = new ApolloServer({
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
 })
 
-server.listen(7777).then(({ url }) => console.log(`SERVER_ON :: Projeto: ${ENV_PROJETO.NAME} :: ${url}`))
+server.listen(4000).then(({ url }) => console.log(`SERVER_ON :: Projeto: ${ENV_PROJETO.NAME} :: ${url}`))
 
 /**
  * SERVER GRAPHQL >> APOLLO_SERVER
