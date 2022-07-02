@@ -1,13 +1,5 @@
 import { Router } from 'express'
+import { clientesRoutes } from '@src/servers/routes/express/cliente_routes/ClientesRoutes'
 
-const routes = Router()
-
-// const createUserController = new CreateUserController();
-// const getPostsByUserController = new GetPostsByUserController();
-
-// routes.post("/users", createUserController.handle);
-// routes.get("/posts/user/:id", getPostsByUserController.handle);
-
-// routes.get("inicio", () => )
-
-export { routes }
+// CENTRAL COLECOES DE ROTAS
+export const routes = [clientesRoutes]

@@ -1,0 +1,45 @@
+###
+# -------------------------------------
+# CADASTRAR DADO
+POST {{host}}/create-cliente
+Content-Type: application/json
+
+{
+    "nome": "NOMEHttpUM",
+    "email": "HttpUM@email.com",
+    "password": "123123",
+    "identificador": "cpf"
+}
+
+###
+#------------------------------------
+###
+# -------------------------------------
+# CADASTRAR DADO
+POST {{host}}/create-cliente
+Content-Type: application/json
+
+{
+    "nome": "NOMEHttpDOIS",
+    "email": "HttpDOIS@email.com",
+    "password": "123123",
+    "identificador": "cpf"
+}
+
+###
+#------------------------------------
+###
+# -------------------------------------
+# CADASTRAR DADO
+POST {{host}}/create-cliente
+Content-Type: application/json
+
+{
+    "nome": "NOMEHttpTRES",
+    "email": "HttpTRES@email.com",
+    "password": "123123",
+    "identificador": "cpf"
+}
+
+###
+#------------------------------------
