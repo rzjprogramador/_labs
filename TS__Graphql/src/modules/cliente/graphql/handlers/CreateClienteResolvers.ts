@@ -1,5 +1,4 @@
 import { createClienteInject } from '@src/modules/cliente/injects/CreateClienteInject'
-import { CreateClienteService } from '@src/modules/cliente/service/CreateClienteService'
 
 type CreateClienteRequestResolver = {
   input: CreateClienteInput

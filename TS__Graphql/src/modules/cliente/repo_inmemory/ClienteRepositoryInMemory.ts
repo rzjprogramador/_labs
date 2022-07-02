@@ -2,7 +2,7 @@ import { Cliente } from '@src/modules/cliente/_entity/Cliente'
 import { ClienteRepository } from '@src/modules/cliente/contracts/ClienteRepository'
 
 export class ClienteRepositoryInMemory implements ClienteRepository {
-  private collectionCliente: Cliente[] = []
+  public collectionCliente: Cliente[] = []
 
   async create(input: Cliente): Promise<Cliente> {
     const cliente = Cliente.create(input)
