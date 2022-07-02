@@ -2,7 +2,7 @@ import { createCliente } from '@src/modules/cliente/graphql/handlers/CreateClien
 
 const clienteResolvers = {
   Query: {
-    helloCliente: () => `Hello Cliente -> 2 --`,
+    helloCliente: () => `Hello Cliente -> 1 --`,
   },
 
   Mutation: {

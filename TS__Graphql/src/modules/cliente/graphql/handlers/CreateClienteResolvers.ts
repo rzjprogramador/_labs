@@ -1,3 +1,4 @@
+import { createClienteInject } from '@src/modules/cliente/injects/CreateClienteInject'
 import { CreateClienteService } from '@src/modules/cliente/service/CreateClienteService'
 
 type CreateClienteRequestResolver = {
@@ -11,7 +12,6 @@ type CreateClienteInput = {
 }
 
 export async function createCliente(_: any, { input }: CreateClienteRequestResolver) {
-  const { nome, email, password, identificador } = input
-  const newCliente = await CreateClienteService({ nome, email, password, identificador })
-  return newCliente
+  const createCliente = await createClienteInject().execute(input)
+  return createCliente
 }
