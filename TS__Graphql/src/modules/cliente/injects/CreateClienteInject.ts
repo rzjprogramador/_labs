@@ -1,11 +1,6 @@
-import { ClienteRepositoryInMemory } from '@src/modules/cliente/repo_inmemory/ClienteRepositoryInMemory'
 import { CreateClienteService } from '@src/modules/cliente/service/CreateClienteService'
 import { GetAllClienteService } from '@src/modules/cliente/service/GetAllClienteService'
-
-// POLO UNICO REPOSITORIO EM USO >> MUDE AQUI
-const repositoryObject = {
-  use: new ClienteRepositoryInMemory(),
-}
+import { repositoryObject } from '@src/modules/cliente/injects/_UseRepositories'
 
 // INJECOES:
 
