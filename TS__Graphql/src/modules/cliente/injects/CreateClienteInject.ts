@@ -1,6 +1,6 @@
 import { CreateClienteService } from '@src/modules/cliente/service/CreateClienteService'
 import { GetAllClienteService } from '@src/modules/cliente/service/GetAllClienteService'
-import { repositoryObject } from '@src/modules/cliente/injects/_UseRepositories'
+import { repositoryObject } from '@src/modules/cliente/injects/_UseClienteRepositories'
 
 // INJECOES:
 
