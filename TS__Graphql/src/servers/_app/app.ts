@@ -13,6 +13,6 @@ app.use(express.json())
 
 app.use(routes)
 
-app.use('/graphql', graphqlRoute) // ROTA UNICA GRAPHQL
+app.use('/graphql', graphqlRoute) // NOME DA ROTA UNICA GRAPHQL PARA O NAVEGADOR
 
 app.use(appErrors)

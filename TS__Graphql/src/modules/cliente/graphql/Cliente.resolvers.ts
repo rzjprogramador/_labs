@@ -1,6 +1,6 @@
 import { createCliente } from '@src/modules/cliente/graphql/handlers/CreateClienteResolvers'
 
-export const clienteResolvers = {
+const clienteResolvers = {
   Query: {
     helloCliente: () => `Hello Cliente`,
   },
@@ -12,4 +12,6 @@ export const clienteResolvers = {
   //
 }
 
-// OBS: IMPORTAR O OBJETO DE RESOLVERS NO CENTRALIZADOR DE RESOLVERS
+export default clienteResolvers
+
+// OBS: NESTA IMPLEMENTACAO DE MERGE AS IMPORTACOES DE RESOLVERS TEM QUE SER DEFAULT
