@@ -1,0 +1,8 @@
+###
+# -------------------------------------
+# CADASTRAR DADO
+GET {{host}}/clientes
+Content-Type: application/json
+
+###
+#------------------------------------
