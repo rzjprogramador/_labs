@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { CreateClienteController } from '@src/servers/routes/express/controller/CreateClienteController'
-import { GetAllClienteController } from '@src/servers/routes/express/controller/GetAllClienteController'
+import { CreateClienteController } from '@src/servers/routes/express/controllers/cliente/CreateClienteController'
+import { GetAllClienteController } from '@src/servers/routes/express/controllers/cliente/GetAllClienteController'
 
 export const clientesRoutes = Router()
 

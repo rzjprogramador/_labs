@@ -1,0 +1,27 @@
+scalar Date
+
+type Pedido {
+  id: ID
+  codigo: String
+  quantidade: Int
+  endereco: String
+  createdAt: Date
+}
+
+input CreatePedidoInput {
+  quantidade: Int
+  endereco: String
+}
+
+# ###########################################
+# PONTOS DE ENTRADAS :: CONSULTAS & MUTACOES
+# ##########################################
+
+type Query {
+  helloPedido: String
+  getAllPedidos: [Pedido!]!
+}
+
+type Mutation {
+  createPedido(input: CreatePedidoInput): Pedido
+}

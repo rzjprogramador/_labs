@@ -1,5 +1,5 @@
-import { Router } from 'express'
-import { clientesRoutes } from '@src/servers/routes/express/cliente_routes/ClientesRoutes'
+import { clientesRoutes } from '@src/servers/routes/express/routes_app/ClientesRoutes'
+import { pedidosRoutes } from '@src/servers/routes/express/routes_app/PedidosRoutes'
 
 // CENTRAL COLECOES DE ROTAS
-export const routes = [clientesRoutes]
+export const routes = [clientesRoutes, pedidosRoutes]

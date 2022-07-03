@@ -1,0 +1,13 @@
+###
+# -------------------------------------
+# CADASTRAR DADO
+POST {{host}}/create-pedido
+Content-Type: application/json
+
+{
+    "quantidade": 1,
+    "endereco": "ruaTRES"
+}
+
+###
+#------------------------------------

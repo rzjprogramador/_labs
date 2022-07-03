@@ -1,0 +1,8 @@
+###
+# -------------------------------------
+# CADASTRAR DADO
+GET {{host}}/pedidos
+Content-Type: application/json
+
+###
+#------------------------------------
