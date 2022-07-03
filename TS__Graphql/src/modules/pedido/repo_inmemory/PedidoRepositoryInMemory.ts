@@ -13,4 +13,9 @@ export class PedidoRepositoryInMemory implements PedidoRepository {
   async getAllPedidos(): Promise<Pedido[]> {
     return await this.collectionPedido
   }
+
+  async findPedidoByCliente(id: any): Promise<any> {
+    const authorPedido = await this.collectionPedido.find((p) => p.id === id)
+    return authorPedido
+  }
 }

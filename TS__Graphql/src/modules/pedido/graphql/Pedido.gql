@@ -1,3 +1,5 @@
+# import Cliente from '../../cliente/_entity/Cliente'
+
 scalar Date
 
 type Pedido {
@@ -6,11 +8,13 @@ type Pedido {
   quantidade: Int
   endereco: String
   createdAt: Date
+  author: Cliente
 }
 
 input CreatePedidoInput {
-  quantidade: Int
-  endereco: String
+  quantidade: Int!
+  endereco: String!
+  author: ID!
 }
 
 # ###########################################
@@ -20,6 +24,7 @@ input CreatePedidoInput {
 type Query {
   helloPedido: String
   getAllPedidos: [Pedido!]!
+  getPedidoByCliente(idCliente: ID): [Pedido]
 }
 
 type Mutation {

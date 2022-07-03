@@ -6,6 +6,7 @@ type CreatePedidoRequestResolver = {
 type CreatePedidoInput = {
   quantidade: number
   endereco: string
+  author: string
 }
 
 export async function createPedido(_: any, { input }: CreatePedidoRequestResolver) {

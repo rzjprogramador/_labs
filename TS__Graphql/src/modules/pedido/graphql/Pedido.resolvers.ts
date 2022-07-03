@@ -1,3 +1,4 @@
+import { getPedidoByCliente } from '@src/modules/pedido/graphql/handlers/GetPedidoByCliente';
 import { createPedido } from '@src/modules/pedido/graphql/handlers/CreatePedidoResolvers'
 import { getAllPedidos } from '@src/modules/pedido/graphql/handlers/GetAllPedidos'
 
@@ -5,6 +6,7 @@ const pedidoResolvers = {
   Query: {
     helloPedido: () => `Hello Pedido -> 1 --`,
     getAllPedidos,
+    getPedidoByCliente,
   },
 
   Mutation: {

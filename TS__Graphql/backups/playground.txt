@@ -1,0 +1,44 @@
+mutation CREATE_CLIENTE {
+  createCliente(
+    input: {
+      nome: "LEO",
+      email: "2@email.com",
+      password: "123123",
+      identificador: "cnpj"
+    }) {
+    id
+    nome
+  }
+}
+
+// ===============
+
+
+query GET_ALL_CLIENTES {
+  getAllClientes {
+    id
+    nome
+    email
+  }
+}
+
+// ===============
+
+mutation CREATE_PEDIDO {
+  createPedido(input: {
+    quantidade: 1
+    endereco: "111"
+    author: " "
+  })
+  {
+    id
+    quantidade
+    endereco
+    createdAt
+  }
+}
+
+// ===============
+
+
+

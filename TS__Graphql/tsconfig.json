@@ -27,6 +27,6 @@
   "include": [
     // INCLUI NO BUILD E NA LEITURA DE PASTA NA RAIZ DO PROJETO
     "src/**/**/**/*.ts"
-  ],
+, "src/modules/pedido/service/GetAllPedidoService copy.ts"  ],
   "exclude": []
 }
