@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { CreatePedidoController } from '@src/servers/routes/express/controllers/pedido/CreatePedidoController'
-import { GetAllPedidoController } from '@src/servers/routes/express/controllers/pedido/GetAllPedidoController'
+import { CreatePedidoController } from '@src/servers/rest_express/modules/pedido/controllers/CreatePedidoController'
+import { GetAllPedidoController } from '@src/servers/rest_express/modules/pedido/controllers/GetAllPedidoController'
 
 export const pedidosRoutes = Router()
 

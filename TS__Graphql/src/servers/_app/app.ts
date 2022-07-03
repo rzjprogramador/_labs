@@ -3,7 +3,7 @@ import 'module-alias/register'
 
 import express from 'express'
 
-import { routes } from '../routes/express/routes'
+import { routes } from '../routes/routes_express/routes'
 import { appErrors } from './app_errors'
 import { graphqlRoute } from '../graphql_express/app_graphql_route'
 
