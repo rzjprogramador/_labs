@@ -1,6 +1,6 @@
 ###
 # -------------------------------------
-# CADASTRAR DADO
+# BUSCAR
 GET {{host}}/pedidos
 Content-Type: application/json
 

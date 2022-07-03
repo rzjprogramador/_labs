@@ -1,6 +1,6 @@
 ###
 # -------------------------------------
-# CADASTRAR DADO
+# BUSCAR DADO
 GET {{host}}/clientes
 Content-Type: application/json
 
