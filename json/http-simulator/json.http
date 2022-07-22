@@ -1,0 +1,16 @@
+# BUSCAR TODOS
+GET {{host}}/json/todos
+
+###
+
+# INSERIR ADICIONAR
+POST {{host}}/json/insert
+Content-Type: application/json
+
+{
+    "nome": "TRES",
+    "email": "UM@email.com",
+    "senha": "123123"
+}
+
+###
